@@ -2,6 +2,8 @@
 
 **Level:** Advanced
 
+> **Deep dive:** [Complete study guide](study-guide.md) — documentation, worked example, pattern signals, tricks, pitfalls, drills, and extra practice.
+
 Store strings by prefixes for fast prefix lookup, dictionary pruning, and bitwise branching.
 
 ---
@@ -60,12 +62,12 @@ class Trie:
 
 | Problem | Level | Core approach | Time | Space |
 |---|---|---|---|---|
-| Implement Trie | Medium | Nested nodes with children map and end marker. | O(L) per op | O(total chars) |
-| Word Search II | Hard | Trie of words plus board DFS with pruning. | O(mn*4^L) worst | O(total chars) |
-| Design Add and Search Words | Medium | Trie plus DFS branching on wildcard dot. | O(26^dots * L) | O(total chars) |
-| Replace Words | Medium | Find shortest root prefix in trie for each word. | O(total chars) | O(dict chars) |
-| Map Sum Pairs | Medium | Trie nodes store prefix sums or deltas. | O(L) per op | O(total chars) |
-| Maximum XOR of Two Numbers | Medium | Binary trie; greedily choose opposite bit. | O(n*bits) | O(n*bits) |
+| [Implement Trie](https://leetcode.com/problems/implement-trie-prefix-tree/) | Medium | Nested nodes with children map and end marker. | O(L) per op | O(total chars) |
+| [Word Search II](https://leetcode.com/problems/word-search-ii/) | Hard | Trie of words plus board DFS with pruning. | O(mn*4^L) worst | O(total chars) |
+| [Design Add and Search Words](https://leetcode.com/problems/design-add-and-search-words-data-structure/) | Medium | Trie plus DFS branching on wildcard dot. | O(26^dots * L) | O(total chars) |
+| [Replace Words](https://leetcode.com/problems/replace-words/) | Medium | Find shortest root prefix in trie for each word. | O(total chars) | O(dict chars) |
+| [Map Sum Pairs](https://leetcode.com/problems/map-sum-pairs/) | Medium | Trie nodes store prefix sums or deltas. | O(L) per op | O(total chars) |
+| [Maximum XOR of Two Numbers](https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/) | Medium | Binary trie; greedily choose opposite bit. | O(n*bits) | O(n*bits) |
 
 ---
 
@@ -85,3 +87,4 @@ class Trie:
 1. Read the related sections in [`docs/patterns-cheatsheet.md`](../../docs/patterns-cheatsheet.md).
 2. Implement the relevant template from [`templates/python_dsa_templates.py`](../../templates/python_dsa_templates.py) without looking.
 3. Add solved problems and mistakes to [`practice/study-tracker.md`](../../practice/study-tracker.md).
+4. Browse the topic [`problems/`](problems/README.md) index for prompt links and worked solutions.

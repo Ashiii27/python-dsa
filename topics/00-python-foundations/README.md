@@ -2,6 +2,8 @@
 
 **Level:** Beginner
 
+> **Deep dive:** [Complete study guide](study-guide.md) — documentation, worked example, pattern signals, tricks, pitfalls, drills, and extra practice.
+
 Build the Python fluency needed to solve DSA problems quickly and safely.
 
 ---
@@ -59,12 +61,12 @@ idx = bisect.bisect_left([1, 3, 5], 3)
 
 | Problem | Level | Core approach | Time | Space |
 |---|---|---|---|---|
-| Build a Frequency Counter | Easy | Use a dict or Counter and increment per item. | O(n) | O(k) |
-| Group Items by Key | Easy | Use defaultdict(list) and append into each group. | O(n) | O(n) |
-| Implement Queue with deque | Easy | Use append and popleft for true queue operations. | O(1) per op | O(n) |
-| Sort Records by Multiple Fields | Easy | Use tuple key like (age, -score). | O(n log n) | O(n) |
-| Top K Values with Heap | Medium | Maintain a min-heap of size k. | O(n log k) | O(k) |
-| Parse and Count Log Events | Medium | Split lines, normalize fields, aggregate with maps. | O(total chars) | O(unique keys) |
+| [Build a Frequency Counter](https://docs.python.org/3/library/collections.html#collections.Counter) | Easy | Use a dict or Counter and increment per item. | O(n) | O(k) |
+| [Group Items by Key](https://docs.python.org/3/library/collections.html#collections.defaultdict) | Easy | Use defaultdict(list) and append into each group. | O(n) | O(n) |
+| [Implement Queue with deque](https://docs.python.org/3/library/collections.html#collections.deque) | Easy | Use append and popleft for true queue operations. | O(1) per op | O(n) |
+| [Sort Records by Multiple Fields](https://docs.python.org/3/howto/sorting.html) | Easy | Use tuple key like (age, -score). | O(n log n) | O(n) |
+| [Top K Values with Heap](https://docs.python.org/3/library/heapq.html) | Medium | Maintain a min-heap of size k. | O(n log k) | O(k) |
+| [Parse and Count Log Events](https://docs.python.org/3/library/stdtypes.html#str.split) | Medium | Split lines, normalize fields, aggregate with maps. | O(total chars) | O(unique keys) |
 
 ---
 
@@ -84,3 +86,4 @@ idx = bisect.bisect_left([1, 3, 5], 3)
 1. Read the related sections in [`docs/patterns-cheatsheet.md`](../../docs/patterns-cheatsheet.md).
 2. Implement the relevant template from [`templates/python_dsa_templates.py`](../../templates/python_dsa_templates.py) without looking.
 3. Add solved problems and mistakes to [`practice/study-tracker.md`](../../practice/study-tracker.md).
+4. Browse the topic [`problems/`](problems/README.md) index for prompt links and worked solutions.

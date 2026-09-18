@@ -2,6 +2,8 @@
 
 **Level:** Core to Advanced
 
+> **Deep dive:** [Complete study guide](study-guide.md) — documentation, worked example, pattern signals, tricks, pitfalls, drills, and extra practice.
+
 Solve hierarchical problems using DFS, BFS, recursion returns, path reasoning, and serialization.
 
 ---
@@ -66,16 +68,16 @@ def level_order(root):
 
 | Problem | Level | Core approach | Time | Space |
 |---|---|---|---|---|
-| Maximum Depth of Binary Tree | Easy | DFS returns 1 + max child depth. | O(n) | O(h) |
-| Invert Binary Tree | Easy | Swap children recursively or iteratively. | O(n) | O(h) |
-| Diameter of Binary Tree | Easy/Medium | Candidate at node is left height + right height. | O(n) | O(h) |
-| Balanced Binary Tree | Easy | Return height or -1 if unbalanced. | O(n) | O(h) |
-| Lowest Common Ancestor of Binary Tree | Medium | Current is LCA if both sides find targets. | O(n) | O(h) |
-| Binary Tree Level Order Traversal | Medium | BFS by queue level sizes. | O(n) | O(w) |
-| Path Sum III | Medium | Prefix sum count map during DFS. | O(n) | O(h) |
-| Construct Binary Tree from Preorder and Inorder | Medium | Use preorder root and inorder index map. | O(n) | O(n) |
-| Serialize and Deserialize Binary Tree | Hard | Preorder or BFS with null markers. | O(n) | O(n) |
-| Binary Tree Maximum Path Sum | Hard | Return downward gain; update through-node path. | O(n) | O(h) |
+| [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | Easy | DFS returns 1 + max child depth. | O(n) | O(h) |
+| [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/) | Easy | Swap children recursively or iteratively. | O(n) | O(h) |
+| [Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/) | Easy/Medium | Candidate at node is left height + right height. | O(n) | O(h) |
+| [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/) | Easy | Return height or -1 if unbalanced. | O(n) | O(h) |
+| [Lowest Common Ancestor of Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/) | Medium | Current is LCA if both sides find targets. | O(n) | O(h) |
+| [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) | Medium | BFS by queue level sizes. | O(n) | O(w) |
+| [Path Sum III](https://leetcode.com/problems/path-sum-iii/) | Medium | Prefix sum count map during DFS. | O(n) | O(h) |
+| [Construct Binary Tree from Preorder and Inorder](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder/) | Medium | Use preorder root and inorder index map. | O(n) | O(n) |
+| [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) | Hard | Preorder or BFS with null markers. | O(n) | O(n) |
+| [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/) | Hard | Return downward gain; update through-node path. | O(n) | O(h) |
 
 ---
 
@@ -95,3 +97,4 @@ def level_order(root):
 1. Read the related sections in [`docs/patterns-cheatsheet.md`](../../docs/patterns-cheatsheet.md).
 2. Implement the relevant template from [`templates/python_dsa_templates.py`](../../templates/python_dsa_templates.py) without looking.
 3. Add solved problems and mistakes to [`practice/study-tracker.md`](../../practice/study-tracker.md).
+4. Browse the topic [`problems/`](problems/README.md) index for prompt links and worked solutions.

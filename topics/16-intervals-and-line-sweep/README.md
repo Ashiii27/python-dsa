@@ -2,6 +2,8 @@
 
 **Level:** Core to Advanced
 
+> **Deep dive:** [Complete study guide](study-guide.md) — documentation, worked example, pattern signals, tricks, pitfalls, drills, and extra practice.
+
 Handle ranges, overlaps, scheduling, and event-based counting.
 
 ---
@@ -58,14 +60,14 @@ def merge_intervals(intervals):
 
 | Problem | Level | Core approach | Time | Space |
 |---|---|---|---|---|
-| Merge Intervals | Medium | Sort by start and merge overlaps. | O(n log n) | O(n) |
-| Insert Interval | Medium | Add all before, merge overlapping, then add after. | O(n) | O(n) |
-| Meeting Rooms II | Medium | Sort starts and use min-heap of end times. | O(n log n) | O(n) |
-| My Calendar I | Medium | Check if new interval overlaps existing intervals. | O(n) | O(n) |
-| Employee Free Time | Hard | Merge all busy intervals, gaps are free time. | O(n log n) | O(n) |
-| Car Pooling | Medium | Difference array or sorted pickup/drop events. | O(n log n) or O(U) | O(n or U) |
-| The Skyline Problem | Hard | Sweep events with max-heap and lazy deletion. | O(n log n) | O(n) |
-| Minimum Arrows to Burst Balloons | Medium | Sort by end and greedily shoot arrows. | O(n log n) | O(1) |
+| [Merge Intervals](https://leetcode.com/problems/merge-intervals/) | Medium | Sort by start and merge overlaps. | O(n log n) | O(n) |
+| [Insert Interval](https://leetcode.com/problems/insert-interval/) | Medium | Add all before, merge overlapping, then add after. | O(n) | O(n) |
+| [Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/) | Medium | Sort starts and use min-heap of end times. | O(n log n) | O(n) |
+| [My Calendar I](https://leetcode.com/problems/my-calendar-i/) | Medium | Check if new interval overlaps existing intervals. | O(n) | O(n) |
+| [Employee Free Time](https://leetcode.com/problems/employee-free-time/) | Hard | Merge all busy intervals, gaps are free time. | O(n log n) | O(n) |
+| [Car Pooling](https://leetcode.com/problems/car-pooling/) | Medium | Difference array or sorted pickup/drop events. | O(n log n) or O(U) | O(n or U) |
+| [The Skyline Problem](https://leetcode.com/problems/the-skyline-problem/) | Hard | Sweep events with max-heap and lazy deletion. | O(n log n) | O(n) |
+| [Minimum Arrows to Burst Balloons](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/) | Medium | Sort by end and greedily shoot arrows. | O(n log n) | O(1) |
 
 ---
 
@@ -85,3 +87,4 @@ def merge_intervals(intervals):
 1. Read the related sections in [`docs/patterns-cheatsheet.md`](../../docs/patterns-cheatsheet.md).
 2. Implement the relevant template from [`templates/python_dsa_templates.py`](../../templates/python_dsa_templates.py) without looking.
 3. Add solved problems and mistakes to [`practice/study-tracker.md`](../../practice/study-tracker.md).
+4. Browse the topic [`problems/`](problems/README.md) index for prompt links and worked solutions.

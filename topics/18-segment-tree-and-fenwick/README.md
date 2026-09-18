@@ -2,6 +2,8 @@
 
 **Level:** Advanced
 
+> **Deep dive:** [Complete study guide](study-guide.md) — documentation, worked example, pattern signals, tricks, pitfalls, drills, and extra practice.
+
 Answer range queries with updates efficiently.
 
 ---
@@ -60,12 +62,12 @@ class FenwickTree:
 
 | Problem | Level | Core approach | Time | Space |
 |---|---|---|---|---|
-| Range Sum Query Mutable | Medium | Fenwick or segment tree for updates and range sums. | O(log n) op | O(n) |
-| Count of Smaller Numbers After Self | Hard | Coordinate compress; scan right to left with Fenwick counts. | O(n log n) | O(n) |
-| Reverse Pairs | Hard | Fenwick/merge sort counting greater-than-twice relation. | O(n log n) | O(n) |
-| My Calendar III | Hard | Line sweep with ordered map or dynamic segment tree. | O(n log C) | O(n log C) |
-| Falling Squares | Hard | Coordinate compression plus segment tree max range update. | O(n log n) | O(n) |
-| Num Array | Medium | Classic mutable range sum with Fenwick. | O(log n) | O(n) |
+| [Range Sum Query Mutable](https://leetcode.com/problems/range-sum-query-mutable/) | Medium | Fenwick or segment tree for updates and range sums. | O(log n) op | O(n) |
+| [Count of Smaller Numbers After Self](https://leetcode.com/problems/count-of-smaller-numbers-after-self/) | Hard | Coordinate compress; scan right to left with Fenwick counts. | O(n log n) | O(n) |
+| [Reverse Pairs](https://leetcode.com/problems/reverse-pairs/) | Hard | Fenwick/merge sort counting greater-than-twice relation. | O(n log n) | O(n) |
+| [My Calendar III](https://leetcode.com/problems/my-calendar-iii/) | Hard | Line sweep with ordered map or dynamic segment tree. | O(n log C) | O(n log C) |
+| [Falling Squares](https://leetcode.com/problems/falling-squares/) | Hard | Coordinate compression plus segment tree max range update. | O(n log n) | O(n) |
+| [Num Array](https://leetcode.com/problems/range-sum-query-mutable/) | Medium | Classic mutable range sum with Fenwick. | O(log n) | O(n) |
 
 ---
 
@@ -85,3 +87,4 @@ class FenwickTree:
 1. Read the related sections in [`docs/patterns-cheatsheet.md`](../../docs/patterns-cheatsheet.md).
 2. Implement the relevant template from [`templates/python_dsa_templates.py`](../../templates/python_dsa_templates.py) without looking.
 3. Add solved problems and mistakes to [`practice/study-tracker.md`](../../practice/study-tracker.md).
+4. Browse the topic [`problems/`](problems/README.md) index for prompt links and worked solutions.

@@ -2,6 +2,8 @@
 
 **Level:** Core to Advanced
 
+> **Deep dive:** [Complete study guide](study-guide.md) — documentation, worked example, pattern signals, tricks, pitfalls, drills, and extra practice.
+
 Search sorted positions and monotonic answer spaces with precise boundary control.
 
 ---
@@ -56,15 +58,15 @@ def first_true(lo, hi, pred):
 
 | Problem | Level | Core approach | Time | Space |
 |---|---|---|---|---|
-| Binary Search | Easy | Compare middle with target and discard half. | O(log n) | O(1) |
-| First Bad Version | Easy | Find first true predicate. | O(log n) | O(1) |
-| Search Insert Position | Easy | Lower bound for target. | O(log n) | O(1) |
-| Search in Rotated Sorted Array | Medium | Identify sorted half and decide where target can be. | O(log n) | O(1) |
-| Find Minimum in Rotated Sorted Array | Medium | Compare mid with right to locate pivot/minimum. | O(log n) | O(1) |
-| Koko Eating Bananas | Medium | Binary search speed; feasible if hours <= h. | O(n log M) | O(1) |
-| Capacity To Ship Packages Within D Days | Medium | Binary search capacity and simulate days. | O(n log sum) | O(1) |
-| Split Array Largest Sum | Hard | Binary search max subarray sum; greedily count partitions. | O(n log sum) | O(1) |
-| Median of Two Sorted Arrays | Hard | Binary search partition in smaller array. | O(log min(n,m)) | O(1) |
+| [Binary Search](https://leetcode.com/problems/binary-search/) | Easy | Compare middle with target and discard half. | O(log n) | O(1) |
+| [First Bad Version](https://leetcode.com/problems/first-bad-version/) | Easy | Find first true predicate. | O(log n) | O(1) |
+| [Search Insert Position](https://leetcode.com/problems/search-insert-position/) | Easy | Lower bound for target. | O(log n) | O(1) |
+| [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) | Medium | Identify sorted half and decide where target can be. | O(log n) | O(1) |
+| [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) | Medium | Compare mid with right to locate pivot/minimum. | O(log n) | O(1) |
+| [Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/) | Medium | Binary search speed; feasible if hours <= h. | O(n log M) | O(1) |
+| [Capacity To Ship Packages Within D Days](https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/) | Medium | Binary search capacity and simulate days. | O(n log sum) | O(1) |
+| [Split Array Largest Sum](https://leetcode.com/problems/split-array-largest-sum/) | Hard | Binary search max subarray sum; greedily count partitions. | O(n log sum) | O(1) |
+| [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) | Hard | Binary search partition in smaller array. | O(log min(n,m)) | O(1) |
 
 ---
 
@@ -84,3 +86,4 @@ def first_true(lo, hi, pred):
 1. Read the related sections in [`docs/patterns-cheatsheet.md`](../../docs/patterns-cheatsheet.md).
 2. Implement the relevant template from [`templates/python_dsa_templates.py`](../../templates/python_dsa_templates.py) without looking.
 3. Add solved problems and mistakes to [`practice/study-tracker.md`](../../practice/study-tracker.md).
+4. Browse the topic [`problems/`](problems/README.md) index for prompt links and worked solutions.

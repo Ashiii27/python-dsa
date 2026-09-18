@@ -2,6 +2,14 @@
 
 This roadmap assumes Python as the implementation language. Adjust the speed based on your available time, but keep the order mostly intact because later topics reuse earlier patterns.
 
+For each topic, use the materials in this order:
+
+1. Read its `README.md` overview.
+2. Complete its linked `study-guide.md` example and implementation drills.
+3. Solve the core ladder in `problems/README.md`.
+4. Add mixed-platform questions from [`practice/extended-practice.md`](../practice/extended-practice.md).
+5. Record mistakes and use active recall before moving forward.
+
 ---
 
 ## Phase 0: Python and problem-solving setup

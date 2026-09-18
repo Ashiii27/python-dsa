@@ -2,6 +2,8 @@
 
 **Level:** Advanced
 
+> **Deep dive:** [Complete study guide](study-guide.md) — documentation, worked example, pattern signals, tricks, pitfalls, drills, and extra practice.
+
 Combine multiple data structures to satisfy strict operation complexity requirements.
 
 ---
@@ -65,15 +67,15 @@ class LRUCache:
 
 | Problem | Level | Core approach | Time | Space |
 |---|---|---|---|---|
-| LRU Cache | Medium | Hash map plus doubly linked list or OrderedDict. | O(1) | O(capacity) |
-| LFU Cache | Hard | Map key->node plus frequency buckets ordered by recency. | O(1) | O(capacity) |
-| Insert Delete GetRandom O(1) | Medium | Array plus map value to index; swap-delete. | O(1) avg | O(n) |
-| Time Based Key-Value Store | Medium | Map key to sorted timestamp-value list; binary search get. | O(log n) get | O(n) |
-| Design Twitter | Medium | User follow graph plus heap merge of recent tweets. | O(f log f) | O(total data) |
-| All O(1) Data Structure | Hard | Doubly linked count buckets plus key map. | O(1) | O(n) |
-| Snapshot Array | Medium | Per-index sorted history and binary search by snapshot id. | O(log updates) | O(updates) |
-| Design Browser History | Medium | Two stacks or dynamic array with current pointer. | O(steps) | O(n) |
-| Design Underground System | Medium | Maps for active trips and aggregate route stats. | O(1) avg | O(n) |
+| [LRU Cache](https://leetcode.com/problems/lru-cache/) | Medium | Hash map plus doubly linked list or OrderedDict. | O(1) | O(capacity) |
+| [LFU Cache](https://leetcode.com/problems/lfu-cache/) | Hard | Map key->node plus frequency buckets ordered by recency. | O(1) | O(capacity) |
+| [Insert Delete GetRandom O(1)](https://leetcode.com/problems/insert-delete-getrandom-o1/) | Medium | Array plus map value to index; swap-delete. | O(1) avg | O(n) |
+| [Time Based Key-Value Store](https://leetcode.com/problems/time-based-key-value-store/) | Medium | Map key to sorted timestamp-value list; binary search get. | O(log n) get | O(n) |
+| [Design Twitter](https://leetcode.com/problems/design-twitter/) | Medium | User follow graph plus heap merge of recent tweets. | O(f log f) | O(total data) |
+| [All O(1) Data Structure](https://leetcode.com/problems/all-oone-data-structure/) | Hard | Doubly linked count buckets plus key map. | O(1) | O(n) |
+| [Snapshot Array](https://leetcode.com/problems/snapshot-array/) | Medium | Per-index sorted history and binary search by snapshot id. | O(log updates) | O(updates) |
+| [Design Browser History](https://leetcode.com/problems/design-browser-history/) | Medium | Two stacks or dynamic array with current pointer. | O(steps) | O(n) |
+| [Design Underground System](https://leetcode.com/problems/design-underground-system/) | Medium | Maps for active trips and aggregate route stats. | O(1) avg | O(n) |
 
 ---
 
@@ -93,3 +95,4 @@ class LRUCache:
 1. Read the related sections in [`docs/patterns-cheatsheet.md`](../../docs/patterns-cheatsheet.md).
 2. Implement the relevant template from [`templates/python_dsa_templates.py`](../../templates/python_dsa_templates.py) without looking.
 3. Add solved problems and mistakes to [`practice/study-tracker.md`](../../practice/study-tracker.md).
+4. Browse the topic [`problems/`](problems/README.md) index for prompt links and worked solutions.
