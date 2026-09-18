@@ -2,6 +2,8 @@
 
 **Level:** Core
 
+> **Deep dive:** [Complete study guide](study-guide.md) — documentation, worked example, pattern signals, tricks, pitfalls, drills, and extra practice.
+
 Use LIFO/FIFO structures for parsing, simulation, monotonic candidates, and shortest-step traversal.
 
 ---

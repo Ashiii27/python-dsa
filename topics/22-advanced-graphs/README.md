@@ -2,6 +2,8 @@
 
 **Level:** Advanced
 
+> **Deep dive:** [Complete study guide](study-guide.md) — documentation, worked example, pattern signals, tricks, pitfalls, drills, and extra practice.
+
 Go beyond BFS/DFS into weighted shortest paths, MSTs, SCCs, bridges, and advanced connectivity.
 
 ---

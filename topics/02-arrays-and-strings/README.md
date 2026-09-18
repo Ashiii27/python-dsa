@@ -2,6 +2,8 @@
 
 **Level:** Core
 
+> **Deep dive:** [Complete study guide](study-guide.md) — documentation, worked example, pattern signals, tricks, pitfalls, drills, and extra practice.
+
 Master contiguous data, indexing, two pointers, sliding windows, prefix sums, and matrix traversal.
 
 ---

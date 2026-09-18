@@ -2,6 +2,8 @@
 
 **Level:** Core to Advanced
 
+> **Deep dive:** [Complete study guide](study-guide.md) — documentation, worked example, pattern signals, tricks, pitfalls, drills, and extra practice.
+
 Search sorted positions and monotonic answer spaces with precise boundary control.
 
 ---

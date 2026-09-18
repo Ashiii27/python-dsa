@@ -2,6 +2,8 @@
 
 **Level:** Core
 
+> **Deep dive:** [Complete study guide](study-guide.md) — documentation, worked example, pattern signals, tricks, pitfalls, drills, and extra practice.
+
 Use dictionaries and sets for fast lookup, counting, grouping, canonicalization, and prefix relationships.
 
 ---

@@ -2,6 +2,8 @@
 
 **Level:** Core to Advanced
 
+> **Deep dive:** [Complete study guide](study-guide.md) — documentation, worked example, pattern signals, tricks, pitfalls, drills, and extra practice.
+
 Explore decision trees, generate combinations/permutations, and solve constraint-search problems with pruning.
 
 ---

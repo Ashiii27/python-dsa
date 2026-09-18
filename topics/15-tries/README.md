@@ -2,6 +2,8 @@
 
 **Level:** Advanced
 
+> **Deep dive:** [Complete study guide](study-guide.md) — documentation, worked example, pattern signals, tricks, pitfalls, drills, and extra practice.
+
 Store strings by prefixes for fast prefix lookup, dictionary pruning, and bitwise branching.
 
 ---

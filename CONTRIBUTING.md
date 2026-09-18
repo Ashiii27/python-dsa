@@ -15,6 +15,17 @@ Every topic should include:
 5. **Top interview questions** - problem, level, approach, time, and space.
 6. **Mastery checklist** - how to know when the topic is interview-ready.
 
+Every topic also has a `study-guide.md`. Keep it topic-specific and include:
+
+- a mental model and concise concept documentation
+- pattern-recognition signals rather than pattern-name memorization
+- at least one traceable worked example
+- practical tricks, common mistakes, and implementation drills
+- an active-recall checkpoint
+- additional practice from at least two platforms when good problems are available
+
+Verify every external problem URL before adding it and label platform difficulty as approximate.
+
 ---
 
 ## Problem solution standard

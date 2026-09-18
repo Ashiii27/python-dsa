@@ -2,6 +2,8 @@
 
 **Level:** Core
 
+> **Deep dive:** [Complete study guide](study-guide.md) — documentation, worked example, pattern signals, tricks, pitfalls, drills, and extra practice.
+
 Use ordering properties to validate, search, traverse, and modify binary search trees.
 
 ---

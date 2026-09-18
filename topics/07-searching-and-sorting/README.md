@@ -2,6 +2,8 @@
 
 **Level:** Core
 
+> **Deep dive:** [Complete study guide](study-guide.md) — documentation, worked example, pattern signals, tricks, pitfalls, drills, and extra practice.
+
 Understand comparison sorting, selection, ordering tricks, and when sorting unlocks simpler algorithms.
 
 ---

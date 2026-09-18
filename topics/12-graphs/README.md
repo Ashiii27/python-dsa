@@ -2,6 +2,8 @@
 
 **Level:** Core to Advanced
 
+> **Deep dive:** [Complete study guide](study-guide.md) — documentation, worked example, pattern signals, tricks, pitfalls, drills, and extra practice.
+
 Model relationships with nodes and edges; solve traversal, connectivity, ordering, and shortest-step problems.
 
 ---

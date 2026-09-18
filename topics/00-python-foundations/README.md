@@ -2,6 +2,8 @@
 
 **Level:** Beginner
 
+> **Deep dive:** [Complete study guide](study-guide.md) — documentation, worked example, pattern signals, tricks, pitfalls, drills, and extra practice.
+
 Build the Python fluency needed to solve DSA problems quickly and safely.
 
 ---

@@ -2,6 +2,8 @@
 
 **Level:** Beginner
 
+> **Deep dive:** [Complete study guide](study-guide.md) — documentation, worked example, pattern signals, tricks, pitfalls, drills, and extra practice.
+
 Estimate time and space, compare approaches, and read constraints like interview hints.
 
 ---
