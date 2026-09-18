@@ -58,13 +58,13 @@ def prefix_function(pattern):
 
 | Problem | Level | Core approach | Time | Space |
 |---|---|---|---|---|
-| Implement strStr | Easy | KMP or built-in for practice; KMP is linear. | O(n+m) | O(m) |
-| Repeated Substring Pattern | Easy | Use prefix function or string trick. | O(n) | O(n) |
-| Longest Happy Prefix | Hard | Last value of KMP prefix table gives longest border. | O(n) | O(n) |
-| Repeated DNA Sequences | Medium | Rolling hash or fixed-length substring set. | O(n) | O(n) |
-| Shortest Palindrome | Hard | KMP on s + separator + reverse(s). | O(n) | O(n) |
-| Longest Palindromic Substring | Medium | Expand around centers or Manacher. | O(n^2) or O(n) | O(1) or O(n) |
-| Distinct Echo Substrings | Hard | Rolling hash compare adjacent equal-length substrings. | O(n^2) | O(n^2) set |
+| [Implement strStr](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) | Easy | KMP or built-in for practice; KMP is linear. | O(n+m) | O(m) |
+| [Repeated Substring Pattern](https://leetcode.com/problems/repeated-substring-pattern/) | Easy | Use prefix function or string trick. | O(n) | O(n) |
+| [Longest Happy Prefix](https://leetcode.com/problems/longest-happy-prefix/) | Hard | Last value of KMP prefix table gives longest border. | O(n) | O(n) |
+| [Repeated DNA Sequences](https://leetcode.com/problems/repeated-dna-sequences/) | Medium | Rolling hash or fixed-length substring set. | O(n) | O(n) |
+| [Shortest Palindrome](https://leetcode.com/problems/shortest-palindrome/) | Hard | KMP on s + separator + reverse(s). | O(n) | O(n) |
+| [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) | Medium | Expand around centers or Manacher. | O(n^2) or O(n) | O(1) or O(n) |
+| [Distinct Echo Substrings](https://leetcode.com/problems/distinct-echo-substrings/) | Hard | Rolling hash compare adjacent equal-length substrings. | O(n^2) | O(n^2) set |
 
 ---
 
@@ -84,3 +84,4 @@ def prefix_function(pattern):
 1. Read the related sections in [`docs/patterns-cheatsheet.md`](../../docs/patterns-cheatsheet.md).
 2. Implement the relevant template from [`templates/python_dsa_templates.py`](../../templates/python_dsa_templates.py) without looking.
 3. Add solved problems and mistakes to [`practice/study-tracker.md`](../../practice/study-tracker.md).
+4. Browse the topic [`problems/`](problems/README.md) index for prompt links and worked solutions.

@@ -57,12 +57,12 @@ def logarithmic_steps(n: int) -> int:
 
 | Problem | Level | Core approach | Time | Space |
 |---|---|---|---|---|
-| Two Sum Brute Force | Easy | Two nested loops over all pairs. | O(n^2) | O(1) |
-| Two Sum with Hash Map | Easy | One pass storing seen values or complements. | O(n) | O(n) |
-| Merge Sort Analysis | Medium | Use T(n)=2T(n/2)+O(n). | O(n log n) | O(n) |
-| Binary Search Analysis | Easy | Search space halves each step. | O(log n) | O(1) |
-| Naive Fibonacci | Medium | Repeated branching calls create exponential tree. | O(2^n) | O(n) |
-| Memoized Fibonacci | Medium | Each state 0..n computed once. | O(n) | O(n) |
+| [Two Sum Brute Force](https://leetcode.com/problems/two-sum/) | Easy | Two nested loops over all pairs. | O(n^2) | O(1) |
+| [Two Sum with Hash Map](https://leetcode.com/problems/two-sum/) | Easy | One pass storing seen values or complements. | O(n) | O(n) |
+| [Merge Sort Analysis](https://en.wikipedia.org/wiki/Merge_sort) | Medium | Use T(n)=2T(n/2)+O(n). | O(n log n) | O(n) |
+| [Binary Search Analysis](https://leetcode.com/problems/binary-search/) | Easy | Search space halves each step. | O(log n) | O(1) |
+| [Naive Fibonacci](https://leetcode.com/problems/fibonacci-number/) | Medium | Repeated branching calls create exponential tree. | O(2^n) | O(n) |
+| [Memoized Fibonacci](https://leetcode.com/problems/fibonacci-number/) | Medium | Each state 0..n computed once. | O(n) | O(n) |
 
 ---
 
@@ -82,3 +82,4 @@ def logarithmic_steps(n: int) -> int:
 1. Read the related sections in [`docs/patterns-cheatsheet.md`](../../docs/patterns-cheatsheet.md).
 2. Implement the relevant template from [`templates/python_dsa_templates.py`](../../templates/python_dsa_templates.py) without looking.
 3. Add solved problems and mistakes to [`practice/study-tracker.md`](../../practice/study-tracker.md).
+4. Browse the topic [`problems/`](problems/README.md) index for prompt links and worked solutions.

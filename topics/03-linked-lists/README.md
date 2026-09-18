@@ -60,15 +60,15 @@ def reverse_list(head):
 
 | Problem | Level | Core approach | Time | Space |
 |---|---|---|---|---|
-| Reverse Linked List | Easy | Redirect pointers using prev/current/next. | O(n) | O(1) |
-| Merge Two Sorted Lists | Easy | Dummy tail attaches the smaller current node. | O(n+m) | O(1) |
-| Linked List Cycle | Easy | Floyd fast/slow pointers meet if a cycle exists. | O(n) | O(1) |
-| Middle of the Linked List | Easy | Fast moves two steps while slow moves one. | O(n) | O(1) |
-| Remove Nth Node From End | Medium | Dummy plus two pointers separated by n. | O(n) | O(1) |
-| Add Two Numbers | Medium | Simulate digit addition with carry using dummy head. | O(max(n,m)) | O(1) extra |
-| Reorder List | Medium | Find middle, reverse second half, merge alternating. | O(n) | O(1) |
-| Copy List with Random Pointer | Medium | Map original nodes to cloned nodes, then wire pointers. | O(n) | O(n) |
-| Reverse Nodes in k-Group | Hard | Check k nodes exist, reverse segment, reconnect. | O(n) | O(1) |
+| [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | Easy | Redirect pointers using prev/current/next. | O(n) | O(1) |
+| [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | Easy | Dummy tail attaches the smaller current node. | O(n+m) | O(1) |
+| [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) | Easy | Floyd fast/slow pointers meet if a cycle exists. | O(n) | O(1) |
+| [Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list/) | Easy | Fast moves two steps while slow moves one. | O(n) | O(1) |
+| [Remove Nth Node From End](https://leetcode.com/problems/remove-nth-node-from-end/) | Medium | Dummy plus two pointers separated by n. | O(n) | O(1) |
+| [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) | Medium | Simulate digit addition with carry using dummy head. | O(max(n,m)) | O(1) extra |
+| [Reorder List](https://leetcode.com/problems/reorder-list/) | Medium | Find middle, reverse second half, merge alternating. | O(n) | O(1) |
+| [Copy List with Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer/) | Medium | Map original nodes to cloned nodes, then wire pointers. | O(n) | O(n) |
+| [Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/) | Hard | Check k nodes exist, reverse segment, reconnect. | O(n) | O(1) |
 
 ---
 
@@ -88,3 +88,4 @@ def reverse_list(head):
 1. Read the related sections in [`docs/patterns-cheatsheet.md`](../../docs/patterns-cheatsheet.md).
 2. Implement the relevant template from [`templates/python_dsa_templates.py`](../../templates/python_dsa_templates.py) without looking.
 3. Add solved problems and mistakes to [`practice/study-tracker.md`](../../practice/study-tracker.md).
+4. Browse the topic [`problems/`](problems/README.md) index for prompt links and worked solutions.

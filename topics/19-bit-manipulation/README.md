@@ -56,14 +56,14 @@ def iterate_subsets(n):
 
 | Problem | Level | Core approach | Time | Space |
 |---|---|---|---|---|
-| Single Number | Easy | XOR all numbers; duplicates cancel. | O(n) | O(1) |
-| Counting Bits | Easy | dp[i]=dp[i>>1]+(i&1). | O(n) | O(n) |
-| Reverse Bits | Easy | Shift result and consume input bits. | O(bits) | O(1) |
-| Missing Number | Easy | XOR indices and values, or use sum formula. | O(n) | O(1) |
-| Sum of Two Integers | Medium | Use XOR for sum and AND-shift for carry. | O(bits) | O(1) |
-| Maximum XOR of Two Numbers | Medium | Greedy prefix set or binary trie. | O(n*bits) | O(n) |
-| Subsets via Bitmask | Medium | Enumerate masks from 0 to 2^n-1. | O(n*2^n) | O(n) |
-| Shortest Superstring | Hard | Bitmask DP over last string and used set. | O(n^2*2^n) | O(n*2^n) |
+| [Single Number](https://leetcode.com/problems/single-number/) | Easy | XOR all numbers; duplicates cancel. | O(n) | O(1) |
+| [Counting Bits](https://leetcode.com/problems/counting-bits/) | Easy | dp[i]=dp[i>>1]+(i&1). | O(n) | O(n) |
+| [Reverse Bits](https://leetcode.com/problems/reverse-bits/) | Easy | Shift result and consume input bits. | O(bits) | O(1) |
+| [Missing Number](https://leetcode.com/problems/missing-number/) | Easy | XOR indices and values, or use sum formula. | O(n) | O(1) |
+| [Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/) | Medium | Use XOR for sum and AND-shift for carry. | O(bits) | O(1) |
+| [Maximum XOR of Two Numbers](https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/) | Medium | Greedy prefix set or binary trie. | O(n*bits) | O(n) |
+| [Subsets via Bitmask](https://leetcode.com/problems/subsets/) | Medium | Enumerate masks from 0 to 2^n-1. | O(n*2^n) | O(n) |
+| [Shortest Superstring](https://leetcode.com/problems/find-the-shortest-superstring/) | Hard | Bitmask DP over last string and used set. | O(n^2*2^n) | O(n*2^n) |
 
 ---
 
@@ -83,3 +83,4 @@ def iterate_subsets(n):
 1. Read the related sections in [`docs/patterns-cheatsheet.md`](../../docs/patterns-cheatsheet.md).
 2. Implement the relevant template from [`templates/python_dsa_templates.py`](../../templates/python_dsa_templates.py) without looking.
 3. Add solved problems and mistakes to [`practice/study-tracker.md`](../../practice/study-tracker.md).
+4. Browse the topic [`problems/`](problems/README.md) index for prompt links and worked solutions.

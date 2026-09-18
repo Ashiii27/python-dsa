@@ -63,13 +63,13 @@ class UnionFind:
 
 | Problem | Level | Core approach | Time | Space |
 |---|---|---|---|---|
-| Number of Connected Components | Medium | Union every edge and count remaining components. | O((V+E) alpha V) | O(V) |
-| Redundant Connection | Medium | First edge whose endpoints are already connected creates cycle. | O(E alpha V) | O(V) |
-| Accounts Merge | Medium | Union accounts sharing emails, group by root. | O(N alpha N) | O(N) |
-| Number of Provinces | Medium | Union connected cities or DFS matrix. | O(n^2 alpha n) | O(n) |
-| Most Stones Removed | Medium | Union stones sharing row/column; answer n-components. | O(n alpha n) | O(n) |
-| Similar String Groups | Hard | Union strings that differ in at most two positions. | O(n^2*m) | O(n) |
-| Min Cost to Connect All Points | Medium | Kruskal MST over all point edges. | O(E log E) | O(E) |
+| [Number of Connected Components](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/) | Medium | Union every edge and count remaining components. | O((V+E) alpha V) | O(V) |
+| [Redundant Connection](https://leetcode.com/problems/redundant-connection/) | Medium | First edge whose endpoints are already connected creates cycle. | O(E alpha V) | O(V) |
+| [Accounts Merge](https://leetcode.com/problems/accounts-merge/) | Medium | Union accounts sharing emails, group by root. | O(N alpha N) | O(N) |
+| [Number of Provinces](https://leetcode.com/problems/number-of-provinces/) | Medium | Union connected cities or DFS matrix. | O(n^2 alpha n) | O(n) |
+| [Most Stones Removed](https://leetcode.com/problems/most-stones-removed-with-same-row-or-column/) | Medium | Union stones sharing row/column; answer n-components. | O(n alpha n) | O(n) |
+| [Similar String Groups](https://leetcode.com/problems/similar-string-groups/) | Hard | Union strings that differ in at most two positions. | O(n^2*m) | O(n) |
+| [Min Cost to Connect All Points](https://leetcode.com/problems/min-cost-to-connect-all-points/) | Medium | Kruskal MST over all point edges. | O(E log E) | O(E) |
 
 ---
 
@@ -89,3 +89,4 @@ class UnionFind:
 1. Read the related sections in [`docs/patterns-cheatsheet.md`](../../docs/patterns-cheatsheet.md).
 2. Implement the relevant template from [`templates/python_dsa_templates.py`](../../templates/python_dsa_templates.py) without looking.
 3. Add solved problems and mistakes to [`practice/study-tracker.md`](../../practice/study-tracker.md).
+4. Browse the topic [`problems/`](problems/README.md) index for prompt links and worked solutions.

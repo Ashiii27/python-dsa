@@ -65,13 +65,13 @@ def dijkstra(graph, source):
 
 | Problem | Level | Core approach | Time | Space |
 |---|---|---|---|---|
-| Network Delay Time | Medium | Dijkstra from source over directed weighted graph. | O(E log V) | O(V+E) |
-| Cheapest Flights Within K Stops | Medium | Bellman-Ford style k+1 relaxations or stateful Dijkstra. | O(K E) | O(V) |
-| Min Cost to Connect All Points | Medium | MST using Prim or Kruskal. | O(E log V) | O(E) |
-| Critical Connections in a Network | Hard | Tarjan bridge-finding with discovery and low times. | O(V+E) | O(V+E) |
-| Reconstruct Itinerary | Hard | Hierholzer DFS with lexical min-heaps. | O(E log E) | O(E) |
-| Swim in Rising Water | Hard | Dijkstra/minimax path or binary search + BFS. | O(n^2 log n) | O(n^2) |
-| Find the City With Smallest Number of Neighbors | Medium | Floyd-Warshall or Dijkstra from each city. | O(V^3) | O(V^2) |
+| [Network Delay Time](https://leetcode.com/problems/network-delay-time/) | Medium | Dijkstra from source over directed weighted graph. | O(E log V) | O(V+E) |
+| [Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/) | Medium | Bellman-Ford style k+1 relaxations or stateful Dijkstra. | O(K E) | O(V) |
+| [Min Cost to Connect All Points](https://leetcode.com/problems/min-cost-to-connect-all-points/) | Medium | MST using Prim or Kruskal. | O(E log V) | O(E) |
+| [Critical Connections in a Network](https://leetcode.com/problems/critical-connections-in-a-network/) | Hard | Tarjan bridge-finding with discovery and low times. | O(V+E) | O(V+E) |
+| [Reconstruct Itinerary](https://leetcode.com/problems/reconstruct-itinerary/) | Hard | Hierholzer DFS with lexical min-heaps. | O(E log E) | O(E) |
+| [Swim in Rising Water](https://leetcode.com/problems/swim-in-rising-water/) | Hard | Dijkstra/minimax path or binary search + BFS. | O(n^2 log n) | O(n^2) |
+| [Find the City With Smallest Number of Neighbors](https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/) | Medium | Floyd-Warshall or Dijkstra from each city. | O(V^3) | O(V^2) |
 
 ---
 
@@ -91,3 +91,4 @@ def dijkstra(graph, source):
 1. Read the related sections in [`docs/patterns-cheatsheet.md`](../../docs/patterns-cheatsheet.md).
 2. Implement the relevant template from [`templates/python_dsa_templates.py`](../../templates/python_dsa_templates.py) without looking.
 3. Add solved problems and mistakes to [`practice/study-tracker.md`](../../practice/study-tracker.md).
+4. Browse the topic [`problems/`](problems/README.md) index for prompt links and worked solutions.

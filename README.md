@@ -14,7 +14,8 @@ Use every topic in three passes:
 
 1. **Understand**: read the topic notes, learn the core idea, and trace the examples by hand.
 2. **Implement**: code the templates without looking, then compare with [`templates/python_dsa_templates.py`](templates/python_dsa_templates.py).
-3. **Interview drill**: solve the problem ladder. For every problem, write down:
+3. **Study a worked example**: start with the complete [Arrays & Strings solution pack](topics/02-arrays-and-strings/problems/README.md), including proofs, diagrams, code, and tests.
+4. **Interview drill**: solve the problem ladder. Every question title links to its canonical prompt. For every problem, write down:
    - brute force idea
    - optimized pattern
    - complexity
@@ -45,11 +46,16 @@ python-dsa/
 │   ├── complexity-and-python.md
 │   ├── interview-playbook.md
 │   ├── revision-checklists.md
+│   ├── revision-flashcards.md
+│   ├── visual-guides.md
 │   └── resources.md
 ├── topics/
 │   ├── 00-python-foundations/
+│   │   └── problems/README.md
 │   ├── 01-complexity-analysis/
+│   │   └── problems/README.md
 │   ├── 02-arrays-and-strings/
+│   │   └── problems/             # worked notes, solutions, and tests
 │   ├── ...
 │   └── 23-design-data-structures/
 ├── practice/
@@ -125,7 +131,10 @@ Detailed version: [Problem Solving Framework](docs/problem-solving-framework.md)
 
 ## High-value practice lists
 
-- [Top interview questions by topic](practice/top-interview-questions.md)
+- [Top interview questions by topic](practice/top-interview-questions.md) — all 191 entries include prompt links
+- [Fully worked Arrays & Strings problems](topics/02-arrays-and-strings/problems/README.md) — 11 solutions with standard-library tests
+- [Visual pattern guide](docs/visual-guides.md) — Mermaid diagrams for core interview patterns
+- [Revision flashcards](docs/revision-flashcards.md) — collapsible active-recall cards
 - [Company-style preparation sheets](practice/company-style-sheets.md)
 - [Study tracker](practice/study-tracker.md)
 - [Problem write-up template](templates/problem-template.md)
@@ -154,6 +163,14 @@ The file [`templates/python_dsa_templates.py`](templates/python_dsa_templates.py
 - LRU cache, TimeMap, RandomizedSet
 
 Do not copy templates blindly in interviews. Use them to internalize the shape of solutions.
+
+### Run the worked-solution tests
+
+No third-party dependency is required:
+
+```bash
+python topics/02-arrays-and-strings/problems/run_tests.py
+```
 
 ---
 

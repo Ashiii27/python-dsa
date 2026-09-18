@@ -29,7 +29,20 @@ When adding a solved problem, use `templates/problem-template.md` and include:
 - Python solution
 - complexity
 - edge cases
+- automated tests using the Python standard library
+- a canonical external problem link (when available)
 - mistakes and redo date
+
+Place each solution under `topics/<topic>/problems/<problem-slug>/`:
+
+```text
+problem-slug/
+├── README.md          # worked explanation, proof, complexity, diagram
+├── solution.py        # dependency-free implementation
+└── test_solution.py   # examples plus boundary/regression cases
+```
+
+Tests must run from a fresh clone without third-party packages. Topic-level runners may aggregate standalone problem tests.
 
 ---
 

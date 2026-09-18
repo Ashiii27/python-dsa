@@ -64,17 +64,17 @@ def two_pointers_sorted(nums, target):
 
 | Problem | Level | Core approach | Time | Space |
 |---|---|---|---|---|
-| Two Sum | Easy | Hash map from value to index; check complement while scanning. | O(n) | O(n) |
-| Best Time to Buy and Sell Stock | Easy | Track minimum price so far and best profit. | O(n) | O(1) |
-| Product of Array Except Self | Medium | Prefix products then suffix products in reverse. | O(n) | O(1) extra |
-| Maximum Subarray | Medium | Kadane: best subarray ending at current index. | O(n) | O(1) |
-| 3Sum | Medium | Sort, fix one number, use two pointers and skip duplicates. | O(n^2) | O(1) extra |
-| Container With Most Water | Medium | Move shorter wall because height is bottleneck. | O(n) | O(1) |
-| Longest Substring Without Repeating Characters | Medium | Sliding window with last seen indices or set. | O(n) | O(k) |
-| Minimum Window Substring | Hard | Expand to satisfy counts, shrink to minimize. | O(n) | O(k) |
-| Subarray Sum Equals K | Medium | Count previous prefix sums equal to current-prefix minus k. | O(n) | O(n) |
-| Rotate Image | Medium | Transpose then reverse rows, or rotate layer by layer. | O(n^2) | O(1) |
-| Spiral Matrix | Medium | Maintain top/bottom/left/right boundaries. | O(mn) | O(1) extra |
+| [Two Sum](https://leetcode.com/problems/two-sum/) · [worked solution](problems/two-sum/README.md) | Easy | Hash map from value to index; check complement while scanning. | O(n) | O(n) |
+| [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) · [worked solution](problems/best-time-to-buy-and-sell-stock/README.md) | Easy | Track minimum price so far and best profit. | O(n) | O(1) |
+| [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) · [worked solution](problems/product-of-array-except-self/README.md) | Medium | Prefix products then suffix products in reverse. | O(n) | O(1) extra |
+| [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) · [worked solution](problems/maximum-subarray/README.md) | Medium | Kadane: best subarray ending at current index. | O(n) | O(1) |
+| [3Sum](https://leetcode.com/problems/3sum/) · [worked solution](problems/3sum/README.md) | Medium | Sort, fix one number, use two pointers and skip duplicates. | O(n^2) | O(1) extra |
+| [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) · [worked solution](problems/container-with-most-water/README.md) | Medium | Move shorter wall because height is bottleneck. | O(n) | O(1) |
+| [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) · [worked solution](problems/longest-substring-without-repeating-characters/README.md) | Medium | Sliding window with last seen indices or set. | O(n) | O(k) |
+| [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) · [worked solution](problems/minimum-window-substring/README.md) | Hard | Expand to satisfy counts, shrink to minimize. | O(n) | O(k) |
+| [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/) · [worked solution](problems/subarray-sum-equals-k/README.md) | Medium | Count previous prefix sums equal to current-prefix minus k. | O(n) | O(n) |
+| [Rotate Image](https://leetcode.com/problems/rotate-image/) · [worked solution](problems/rotate-image/README.md) | Medium | Transpose then reverse rows, or rotate layer by layer. | O(n^2) | O(1) |
+| [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) · [worked solution](problems/spiral-matrix/README.md) | Medium | Maintain top/bottom/left/right boundaries. | O(mn) | O(1) extra |
 
 ---
 
@@ -94,3 +94,4 @@ def two_pointers_sorted(nums, target):
 1. Read the related sections in [`docs/patterns-cheatsheet.md`](../../docs/patterns-cheatsheet.md).
 2. Implement the relevant template from [`templates/python_dsa_templates.py`](../../templates/python_dsa_templates.py) without looking.
 3. Add solved problems and mistakes to [`practice/study-tracker.md`](../../practice/study-tracker.md).
+4. Browse the topic [`problems/`](problems/README.md) index for prompt links and worked solutions.

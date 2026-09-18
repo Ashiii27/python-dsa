@@ -60,14 +60,14 @@ def subsets(nums):
 
 | Problem | Level | Core approach | Time | Space |
 |---|---|---|---|---|
-| Subsets | Medium | Include/exclude each element in a binary decision tree. | O(n*2^n) | O(n) |
-| Permutations | Medium | Try each unused number at each position. | O(n*n!) | O(n) |
-| Combination Sum | Medium | DFS with start index; reuse current candidate when allowed. | Exponential | O(depth) |
-| Generate Parentheses | Medium | Add open if available; add close if valid. | O(Catalan n) | O(n) |
-| Word Search | Medium | Backtrack over grid neighbors while marking visited cells. | O(mn*4^L) | O(L) |
-| Palindrome Partitioning | Medium | Choose palindrome prefixes and recurse on suffix. | O(n*2^n) | O(n) |
-| N-Queens | Hard | Place row by row tracking columns and diagonals. | O(n!) | O(n) |
-| Sudoku Solver | Hard | Fill empty cells using row/col/box constraints. | Exponential | O(1) board |
+| [Subsets](https://leetcode.com/problems/subsets/) | Medium | Include/exclude each element in a binary decision tree. | O(n*2^n) | O(n) |
+| [Permutations](https://leetcode.com/problems/permutations/) | Medium | Try each unused number at each position. | O(n*n!) | O(n) |
+| [Combination Sum](https://leetcode.com/problems/combination-sum/) | Medium | DFS with start index; reuse current candidate when allowed. | Exponential | O(depth) |
+| [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) | Medium | Add open if available; add close if valid. | O(Catalan n) | O(n) |
+| [Word Search](https://leetcode.com/problems/word-search/) | Medium | Backtrack over grid neighbors while marking visited cells. | O(mn*4^L) | O(L) |
+| [Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/) | Medium | Choose palindrome prefixes and recurse on suffix. | O(n*2^n) | O(n) |
+| [N-Queens](https://leetcode.com/problems/n-queens/) | Hard | Place row by row tracking columns and diagonals. | O(n!) | O(n) |
+| [Sudoku Solver](https://leetcode.com/problems/sudoku-solver/) | Hard | Fill empty cells using row/col/box constraints. | Exponential | O(1) board |
 
 ---
 
@@ -87,3 +87,4 @@ def subsets(nums):
 1. Read the related sections in [`docs/patterns-cheatsheet.md`](../../docs/patterns-cheatsheet.md).
 2. Implement the relevant template from [`templates/python_dsa_templates.py`](../../templates/python_dsa_templates.py) without looking.
 3. Add solved problems and mistakes to [`practice/study-tracker.md`](../../practice/study-tracker.md).
+4. Browse the topic [`problems/`](problems/README.md) index for prompt links and worked solutions.

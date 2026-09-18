@@ -55,14 +55,14 @@ def is_valid_bst(root):
 
 | Problem | Level | Core approach | Time | Space |
 |---|---|---|---|---|
-| Validate Binary Search Tree | Medium | DFS with strict low/high bounds. | O(n) | O(h) |
-| Kth Smallest Element in a BST | Medium | Inorder traversal and stop at kth node. | O(h+k) | O(h) |
-| Lowest Common Ancestor of a BST | Medium | Move left/right while both targets are on same side. | O(h) | O(1) |
-| Search in a BST | Easy | Follow left/right based on comparison. | O(h) | O(1) |
-| Delete Node in a BST | Medium | For 2 children replace with successor. | O(h) | O(h) or O(1) |
-| Convert Sorted Array to BST | Easy | Choose middle recursively to build balanced tree. | O(n) | O(log n) |
-| Recover Binary Search Tree | Medium/Hard | Inorder should be sorted; find swapped nodes. | O(n) | O(h) |
-| Inorder Successor in BST | Medium | Use right subtree leftmost or track ancestor. | O(h) | O(1) |
+| [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/) | Medium | DFS with strict low/high bounds. | O(n) | O(h) |
+| [Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/) | Medium | Inorder traversal and stop at kth node. | O(h+k) | O(h) |
+| [Lowest Common Ancestor of a BST](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) | Medium | Move left/right while both targets are on same side. | O(h) | O(1) |
+| [Search in a BST](https://leetcode.com/problems/search-in-a-bst/) | Easy | Follow left/right based on comparison. | O(h) | O(1) |
+| [Delete Node in a BST](https://leetcode.com/problems/delete-node-in-a-bst/) | Medium | For 2 children replace with successor. | O(h) | O(h) or O(1) |
+| [Convert Sorted Array to BST](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/) | Easy | Choose middle recursively to build balanced tree. | O(n) | O(log n) |
+| [Recover Binary Search Tree](https://leetcode.com/problems/recover-binary-search-tree/) | Medium/Hard | Inorder should be sorted; find swapped nodes. | O(n) | O(h) |
+| [Inorder Successor in BST](https://leetcode.com/problems/inorder-successor-in-bst/) | Medium | Use right subtree leftmost or track ancestor. | O(h) | O(1) |
 
 ---
 
@@ -82,3 +82,4 @@ def is_valid_bst(root):
 1. Read the related sections in [`docs/patterns-cheatsheet.md`](../../docs/patterns-cheatsheet.md).
 2. Implement the relevant template from [`templates/python_dsa_templates.py`](../../templates/python_dsa_templates.py) without looking.
 3. Add solved problems and mistakes to [`practice/study-tracker.md`](../../practice/study-tracker.md).
+4. Browse the topic [`problems/`](problems/README.md) index for prompt links and worked solutions.

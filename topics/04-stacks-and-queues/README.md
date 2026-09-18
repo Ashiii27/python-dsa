@@ -57,13 +57,13 @@ def next_greater(nums):
 
 | Problem | Level | Core approach | Time | Space |
 |---|---|---|---|---|
-| Valid Parentheses | Easy | Push opens; every close must match stack top. | O(n) | O(n) |
-| Min Stack | Medium | Maintain values plus current minimums. | O(1) per op | O(n) |
-| Evaluate Reverse Polish Notation | Medium | Operators pop two operands and push result. | O(n) | O(n) |
-| Daily Temperatures | Medium | Monotonic decreasing stack of indices waiting for warmer day. | O(n) | O(n) |
-| Largest Rectangle in Histogram | Hard | Increasing stack; pop when height drops to compute widths. | O(n) | O(n) |
-| Sliding Window Maximum | Hard | Deque stores indices in decreasing value order and removes expired front. | O(n) | O(k) |
-| Basic Calculator | Hard | Use stack to handle sign context around parentheses. | O(n) | O(n) |
+| [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | Easy | Push opens; every close must match stack top. | O(n) | O(n) |
+| [Min Stack](https://leetcode.com/problems/min-stack/) | Medium | Maintain values plus current minimums. | O(1) per op | O(n) |
+| [Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/) | Medium | Operators pop two operands and push result. | O(n) | O(n) |
+| [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/) | Medium | Monotonic decreasing stack of indices waiting for warmer day. | O(n) | O(n) |
+| [Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/) | Hard | Increasing stack; pop when height drops to compute widths. | O(n) | O(n) |
+| [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/) | Hard | Deque stores indices in decreasing value order and removes expired front. | O(n) | O(k) |
+| [Basic Calculator](https://leetcode.com/problems/basic-calculator/) | Hard | Use stack to handle sign context around parentheses. | O(n) | O(n) |
 
 ---
 
@@ -83,3 +83,4 @@ def next_greater(nums):
 1. Read the related sections in [`docs/patterns-cheatsheet.md`](../../docs/patterns-cheatsheet.md).
 2. Implement the relevant template from [`templates/python_dsa_templates.py`](../../templates/python_dsa_templates.py) without looking.
 3. Add solved problems and mistakes to [`practice/study-tracker.md`](../../practice/study-tracker.md).
+4. Browse the topic [`problems/`](problems/README.md) index for prompt links and worked solutions.

@@ -55,13 +55,13 @@ def kth_largest_heap(nums, k):
 
 | Problem | Level | Core approach | Time | Space |
 |---|---|---|---|---|
-| Sort Colors | Medium | Dutch national flag with low/mid/high pointers. | O(n) | O(1) |
-| Merge Intervals | Medium | Sort by start, merge overlapping intervals. | O(n log n) | O(n) |
-| Kth Largest Element in an Array | Medium | Quickselect average O(n) or heap O(n log k). | O(n) avg | O(1) |
-| Meeting Rooms | Easy | Sort intervals by start and check overlaps. | O(n log n) | O(1) |
-| Wiggle Sort II | Medium/Hard | Median partition; arrange larger/smaller alternately. | O(n) | O(n) or O(1) |
-| Count Inversions | Hard | Merge sort while counting cross inversions. | O(n log n) | O(n) |
-| Largest Number | Medium | Sort numbers by concatenation order. | O(n log n * k) | O(n) |
+| [Sort Colors](https://leetcode.com/problems/sort-colors/) | Medium | Dutch national flag with low/mid/high pointers. | O(n) | O(1) |
+| [Merge Intervals](https://leetcode.com/problems/merge-intervals/) | Medium | Sort by start, merge overlapping intervals. | O(n log n) | O(n) |
+| [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) | Medium | Quickselect average O(n) or heap O(n log k). | O(n) avg | O(1) |
+| [Meeting Rooms](https://leetcode.com/problems/meeting-rooms/) | Easy | Sort intervals by start and check overlaps. | O(n log n) | O(1) |
+| [Wiggle Sort II](https://leetcode.com/problems/wiggle-sort-ii/) | Medium/Hard | Median partition; arrange larger/smaller alternately. | O(n) | O(n) or O(1) |
+| [Count Inversions](https://www.geeksforgeeks.org/dsa/inversion-count-in-array-using-merge-sort/) | Hard | Merge sort while counting cross inversions. | O(n log n) | O(n) |
+| [Largest Number](https://leetcode.com/problems/largest-number/) | Medium | Sort numbers by concatenation order. | O(n log n * k) | O(n) |
 
 ---
 
@@ -81,3 +81,4 @@ def kth_largest_heap(nums, k):
 1. Read the related sections in [`docs/patterns-cheatsheet.md`](../../docs/patterns-cheatsheet.md).
 2. Implement the relevant template from [`templates/python_dsa_templates.py`](../../templates/python_dsa_templates.py) without looking.
 3. Add solved problems and mistakes to [`practice/study-tracker.md`](../../practice/study-tracker.md).
+4. Browse the topic [`problems/`](problems/README.md) index for prompt links and worked solutions.
