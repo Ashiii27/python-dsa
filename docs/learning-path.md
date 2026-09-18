@@ -12,11 +12,21 @@ For each topic, use the materials in this order:
 
 ---
 
+## Phase -1: Learn the Python language (skip only if you are already fluent)
+
+**Outcome:** You can write, debug, test, and package Python without looking things up constantly.
+
+Work through the [Python Track](../python/README.md): 12 lessons with exercises and tests,
+plus capstone projects. Budget 2-8 weeks depending on your pace. You are done when you can
+write a tested module with a dataclass, a generator, a decorator, and a CLI from a blank file.
+
+---
+
 ## Phase 0: Python and problem-solving setup
 
 **Outcome:** You can write bug-resistant Python quickly.
 
-Study:
+Study (the fast recap — full treatment in the [Python Track](../python/README.md)):
 
 - Python lists, tuples, strings, dictionaries, and sets
 - `collections.Counter`, `defaultdict`, `deque`, `OrderedDict`
