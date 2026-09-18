@@ -8,6 +8,21 @@ This repo is designed to take you from the absolute basics to the level expected
 
 ---
 
+## New to Python? Start here
+
+If you cannot yet write Python comfortably, do the **[Python Track](python/README.md)** first:
+12 hands-on lessons (syntax → collections → functions → OOP → testing → packaging → DSA idioms),
+each with notes, stub exercises, reference solutions and tests, plus capstone projects.
+
+```bash
+cd python && python run_tests.py      # grade your exercises
+```
+
+It takes you from installation to "can build and ship a tested Python project", and its final
+lesson hands you straight into the DSA curriculum below.
+
+---
+
 ## How to use this repo
 
 Use every topic in three passes:
@@ -39,6 +54,11 @@ Recommended daily loop:
 python-dsa/
 ├── README.md
 ├── CONTRIBUTING.md
+├── python/                        # learn Python itself: lessons + projects
+│   ├── README.md
+│   ├── run_tests.py
+│   ├── lessons/01..12/            # notes.md, exercises.py, solutions.py, tests
+│   └── projects/                  # capstone builds (contacts CLI, etc.)
 ├── docs/
 │   ├── learning-path.md
 │   ├── problem-solving-framework.md
@@ -75,6 +95,7 @@ python-dsa/
 
 | Phase | Topics | Target skill |
 |---|---|---|
+| -1. Learn Python | [Python Track (12 lessons + projects)](python/README.md) | Write, test, and package real Python from scratch |
 | 0. Setup + Python | [Python Foundations](topics/00-python-foundations/README.md) | Write clean Python and use built-in collections correctly |
 | 1. Foundations | [Complexity Analysis](topics/01-complexity-analysis/README.md) | Predict time/space and choose viable algorithms by constraints |
 | 2. Linear structures | [Arrays & Strings](topics/02-arrays-and-strings/README.md), [Linked Lists](topics/03-linked-lists/README.md), [Stacks & Queues](topics/04-stacks-and-queues/README.md), [Hashing](topics/05-hashing/README.md) | Master the most common interview patterns |

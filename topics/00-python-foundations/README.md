@@ -6,6 +6,10 @@
 
 Build the Python fluency needed to solve DSA problems quickly and safely.
 
+> **Never written Python before?** This topic is a recap, not a course. Start with the
+> [Python Track](../../python/README.md) — 12 lessons with exercises, solutions, and tests —
+> then come back here.
+
 ---
 
 ## What you must learn
