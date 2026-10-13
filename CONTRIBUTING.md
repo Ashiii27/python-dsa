@@ -4,6 +4,17 @@ Use this guide whenever you add a new topic, problem, or implementation.
 
 ---
 
+## The website
+
+The course site at `https://ashiii27.github.io/python-dsa/` is generated from this
+repository's markdown and Python files — the repo is the single source of truth.
+To improve the website, improve the content here (lessons in `python/`, topics
+and problems in `topics/`, guides in `docs/`, practice lists in `practice/`).
+The site shell lives in `website/`; run it locally with
+`cd website && npm install && npm start` (see [`website/README.md`](website/README.md)).
+
+---
+
 ## Topic guide standard
 
 Every topic should include:

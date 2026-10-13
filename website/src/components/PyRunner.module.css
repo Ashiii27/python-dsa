@@ -1,0 +1,119 @@
+.card {
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin: 1.35rem 0 1.85rem;
+  background: var(--surface);
+  box-shadow: var(--shadow-card);
+  transition: box-shadow 0.35s var(--ease-out), border-color 0.35s;
+}
+
+.card:hover {
+  border-color: color-mix(in srgb, var(--clay) 32%, var(--line));
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.65rem 1.15rem;
+  background: var(--paper-2);
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-weight: 650;
+  font-size: 1.02rem;
+}
+
+.status {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 0.22rem 0.75rem;
+  border-radius: 999px;
+  background: var(--line-soft);
+  color: var(--ink-soft);
+  white-space: nowrap;
+  transition: background 0.3s, color 0.3s;
+}
+
+.status-ok {
+  background: var(--pine-tint);
+  color: var(--pine);
+}
+
+.status-fail {
+  background: var(--clay-tint);
+  color: var(--clay-deep);
+}
+
+.status-running,
+.status-loading {
+  background: color-mix(in srgb, var(--amber) 22%, transparent);
+  color: color-mix(in srgb, var(--amber) 70%, var(--ink));
+}
+
+.editor {
+  display: block;
+  width: 100%;
+  min-height: 230px;
+  padding: 1rem 1.15rem;
+  border: 0;
+  resize: vertical;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  background: var(--background-color, var(--paper));
+  color: var(--ifm-font-color-base);
+  tab-size: 4;
+  transition: background 0.3s;
+}
+
+.editor:focus {
+  outline: 2px solid var(--clay);
+  outline-offset: -2px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1.15rem;
+  border-top: 1px solid var(--line-soft);
+}
+
+.hint {
+  margin-left: auto;
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+}
+
+.output {
+  margin: 0;
+  padding: 1rem 1.15rem;
+  border-top: 1px solid var(--line-soft);
+  background: #1c1610;
+  color: #ece2d2;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  max-height: 340px;
+  overflow: auto;
+  white-space: pre-wrap;
+  animation: fadeIn 0.3s ease both;
+}
+
+.output code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: none; }
+}

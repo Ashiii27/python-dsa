@@ -1,0 +1,114 @@
+.wrap {
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.5rem;
+  background: var(--surface);
+  box-shadow: var(--shadow-card);
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.95rem;
+}
+
+.barWrap {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.bar {
+  flex: 1;
+  height: 9px;
+  border-radius: 999px;
+  background: var(--line-soft);
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--clay), var(--amber));
+  transition: width 0.55s var(--ease-out);
+  position: relative;
+}
+
+.count {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 0.15rem 1rem;
+}
+
+.item {
+  margin: 0;
+}
+
+.label {
+  display: flex;
+  align-items: baseline;
+  gap: 0.65rem;
+  padding: 0.42rem 0.65rem;
+  border-radius: 9px;
+  cursor: pointer;
+  line-height: 1.45;
+  transition: background 0.25s var(--ease-out), transform 0.25s var(--ease-out);
+}
+
+.label:hover {
+  background: var(--paper-2);
+  transform: translateX(3px);
+}
+
+.label input[type='checkbox'] {
+  accent-color: var(--clay);
+  width: 1.02em;
+  height: 1.02em;
+  transition: transform 0.25s var(--ease-spring);
+  flex-shrink: 0;
+}
+
+.label input[type='checkbox']:checked {
+  animation: pop 0.35s var(--ease-spring);
+}
+
+@keyframes pop {
+  0% { transform: scale(1); }
+  45% { transform: scale(1.28); }
+  100% { transform: scale(1); }
+}
+
+.link,
+.doneLink {
+  font-size: 0.93rem;
+  color: inherit;
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1px;
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  transition: background-size 0.3s var(--ease-out), opacity 0.3s;
+}
+
+.label:hover .link {
+  background-size: 100% 1px;
+  background-position: 0 100%;
+}
+
+.doneLink {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
