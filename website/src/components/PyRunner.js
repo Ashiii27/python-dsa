@@ -24,7 +24,14 @@ function loadPyodideOnce() {
 }
 
 const RUN_TESTS_PY = `
-import io, os, sys, unittest
+import io, os, sys, unittest, importlib
+
+# Fresh state: drop modules from previous runs so edited code is re-imported.
+for _name, _mod in list(sys.modules.items()):
+    _file = getattr(_mod, '__file__', None)
+    if _file and str(_file).startswith('/work'):
+        del sys.modules[_name]
+importlib.invalidate_caches()
 
 sys.path.insert(0, os.getcwd())
 loader = unittest.TestLoader()

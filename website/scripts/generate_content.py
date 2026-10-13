@@ -48,7 +48,7 @@ OUT_FILES: dict[str, Path] = {}
 # ---------------------------------------------------------------------------
 
 FENCE_RE = re.compile(r"^\s*(```|~~~)")
-INLINE_CODE_RE = re.compile(r"`[^`]*`")
+INLINE_CODE_RE = re.compile(r"(`[^`]*`)")
 MD_LINK_RE = re.compile(r"(!?)\[([^\]]*)\]\(([^)\s]+)(?:\s+\"[^\"]*\")?\)")
 HTML_TAG_RE = re.compile(r"<(/?[A-Za-z][A-Za-z0-9-]*)")
 
@@ -155,7 +155,7 @@ def escape_mdx(text: str) -> str:
         parts = INLINE_CODE_RE.split(line)
         rebuilt: list[str] = []
         for i, part in enumerate(parts):
-            if i % 2 == 1:  # inline code span
+            if i % 2 == 1:  # inline code span (captured by the split)
                 rebuilt.append(part)
                 continue
             seg = part.replace("{", "&#123;").replace("}", "&#125;")
@@ -220,6 +220,56 @@ def pyrunner_jsx(title: str, module: str, code: str, tests: str,
     return "<PyRunner\n" + "\n".join(props) + "\n/>\n"
 
 
+CHECKPOINT_MARKER = "@@CHECKPOINTS@@"
+
+
+def extract_checkpoints(md_text: str) -> tuple[str, list[dict]]:
+    """Pull `## Checkpoints` list items out of lesson notes.
+
+    Returns (text with a marker left in place, [{q, hint?}]) where inline
+    code backticks are stripped for plain-text display.
+    """
+    m = re.search(r"^## Checkpoints[^\n]*\n+((?:[ \t]*[-*] .+(?:\n|$))+)", md_text, re.M)
+    if not m:
+        return md_text, []
+    items: list[dict] = []
+    for line in m.group(1).splitlines():
+        line = line.strip()
+        if not line.startswith(("- ", "* ")):
+            continue
+        content = line[2:].strip()
+        hint = None
+        hm = re.match(r"^(.+?)\s+\*\((.+?)\)\*$", content)
+        if hm:
+            content, hint = hm.group(1).strip(), hm.group(2).strip()
+        item: dict = {"q": content.replace("`", "")}
+        if hint:
+            item["hint"] = hint.replace("`", "")
+        items.append(item)
+    new_text = md_text[: m.start(1)] + CHECKPOINT_MARKER + "\n" + md_text[m.end(1):]
+    return new_text, items
+
+
+def selfcheck_jsx(lesson_id: str, items: list[dict]) -> str:
+    payload = json.dumps(items, ensure_ascii=False, indent=2)
+    payload = "\n".join("  " + ln for ln in payload.splitlines())
+    return f'<SelfCheck id={{{js_str(lesson_id)}}} items={{{payload}}} />\n'
+
+
+DETAILS_RE = re.compile(r"<details><summary>(.*?)</summary>(.*?)</details>", re.S)
+SECTION_RE = re.compile(r"^## (.+)$", re.M)
+
+
+def strip_html(s: str) -> str:
+    return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", s)).strip()
+
+
+def flashcards_jsx(title: str, cards: list[dict]) -> str:
+    payload = json.dumps(cards, ensure_ascii=False, indent=2)
+    payload = "\n".join("  " + ln for ln in payload.splitlines())
+    return f'<Flashcards title={{{js_str(title)}}} cards={{{payload}}} />\n'
+
+
 # ---------------------------------------------------------------------------
 # registrations (routes) — everything must be known before rewriting links
 # ---------------------------------------------------------------------------
@@ -281,12 +331,15 @@ def gen_python_track() -> list[dict]:
         notes = read(lp / "notes.md")
         title, body = split_front_h1(notes)
         body = rewrite_links(body, rel(lp / "notes.md"), f"/python/{lp.name}")
+        body, checkpoints = extract_checkpoints(body)
         exercises = read(lp / "exercises.py")
         solutions = read(lp / "solutions.py")
         tests = read(lp / "test_exercises.py")
         loader = read(REPO / "python" / "_loader.py")
 
         body = escape_mdx(body)
+        if checkpoints:
+            body = body.replace(CHECKPOINT_MARKER, selfcheck_jsx(lp.name, checkpoints))
         body += "\n\n---\n\n## Practice exercises\n\n"
         body += (
             "Fill in the stubs below (or edit `exercises.py` locally), then run the "
@@ -364,7 +417,7 @@ def track_progress_jsx(track: str, items: list[dict]) -> str:
          for i in items],
         ensure_ascii=False, indent=2)
     payload = "\n".join("  " + line for line in payload.splitlines())
-    return f'<TrackProgress track="{track}" items={{[\n{payload}\n]}} />\n'
+    return f'<TrackProgress track="{track}" items={{{payload}}} />\n'
 
 
 def gen_dsa_track() -> list[dict]:
@@ -506,6 +559,38 @@ def gen_guides() -> None:
             continue
         title, body = split_front_h1(read(src))
         body = rewrite_links(body, rel(src), f"/guides/{stem}")
+
+        if stem == "revision-flashcards":
+            # interactive flashcard decks replace the raw <details> list
+            parts: list[str] = []
+            cursor = 0
+            sections = list(SECTION_RE.finditer(body))
+            intro = body[: sections[0].start()] if sections else body
+            parts.append(escape_mdx(intro))
+            deck_titles: set[str] = set()
+            for idx, sec in enumerate(sections):
+                end = sections[idx + 1].start() if idx + 1 < len(sections) else len(body)
+                chunk = body[sec.start():end]
+                heading = sec.group(1).strip()
+                cards = [
+                    {"q": strip_html(q), "a": strip_html(a)}
+                    for q, a in DETAILS_RE.findall(chunk)
+                ]
+                parts.append(f"\n## {escape_mdx(heading)}\n\n")
+                if cards:
+                    t = heading if heading not in deck_titles else f"{heading} ({idx})"
+                    deck_titles.add(heading)
+                    parts.append(flashcards_jsx(t, cards))
+                remainder = DETAILS_RE.sub("", chunk[sec.end() - sec.start():]).strip()
+                if remainder:
+                    parts.append("\n" + escape_mdx(remainder) + "\n")
+            out = OUT_DIRS["guides"] / f"{stem}.mdx"
+            write_page(out, title, "".join(parts), position=pos,
+                       slug=f"/{stem}", mdx=True)
+            OUT_FILES[rel(src)] = out
+            pos += 1
+            continue
+
         out = OUT_DIRS["guides"] / f"{stem}.md"
         write_page(out, title, body, position=pos, slug=f"/{stem}", mdx=False)
         OUT_FILES[rel(src)] = out
