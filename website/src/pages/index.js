@@ -12,6 +12,13 @@ const STATS = [
   {num: '280+', label: 'curated practice problems'},
 ];
 
+const TICKER = [
+  'two pointers', 'sliding window', 'prefix sums', 'monotonic stack',
+  'fast & slow pointers', 'binary search on answer', 'Kadane', 'topological sort',
+  'Dijkstra', 'union find', 'backtracking', 'DP states', 'trie traversal',
+  'segment tree', 'rolling hash', 'greedy exchange', 'heap / top-k', 'bitmask DP',
+];
+
 const FEATURES = [
   {
     title: 'Learn by running code',
@@ -42,24 +49,45 @@ const FEATURES = [
 function Hero() {
   return (
     <header className={styles.hero}>
-      <div className="container">
+      <div className={styles.heroGrain} aria-hidden="true" />
+      <div className={clsx('container', styles.heroInner)}>
+        <p className={styles.eyebrow} style={{animationDelay: '0.05s'}}>
+          <span className={styles.eyebrowDot} />
+          open source · one repo · learn by running code
+        </p>
         <h1 className={styles.heroTitle}>
-          Python <span className={styles.grad}>DSA Masterclass</span>
+          <span style={{animationDelay: '0.15s'}}>Master Python.</span>{' '}
+          <span style={{animationDelay: '0.3s'}}>Then master</span>{' '}
+          <span className={styles.heroAccent} style={{animationDelay: '0.45s'}}>
+            the algorithms
+            <svg className={styles.squiggle} viewBox="0 0 280 16" fill="none" aria-hidden="true">
+              <path
+                d="M3 11.5c22-6 44-7 66-4 24 3.4 46 5.6 70 3 22-2.4 44-7.4 66-6.2 22 1.2 44 6.8 66 7.8"
+                stroke="currentColor"
+                strokeWidth="5"
+                strokeLinecap="round"
+              />
+            </svg>
+          </span>
+          <br />
+          <span className={styles.heroItal} style={{animationDelay: '0.6s'}}>
+            that run the industry.
+          </span>
         </h1>
-        <p className={styles.heroSub}>
+        <p className={styles.heroSub} style={{animationDelay: '0.75s'}}>
           A complete, hands-on course — from your first Python program to
           top-tier interview readiness. Two tracks, interactive exercises, and a
-          curriculum built on patterns and proofs.
+          curriculum built on patterns and proofs, not memorization.
         </p>
-        <div className={styles.ctaRow}>
+        <div className={styles.ctaRow} style={{animationDelay: '0.9s'}}>
           <Link className="button button--primary button--lg" to="/python">
-            Start with Python →
+            Start with Python&nbsp;→
           </Link>
           <Link className="button button--outline button--lg" to="/dsa">
-            Jump to DSA Track
+            Jump to the DSA Track
           </Link>
         </div>
-        <div className={styles.stats}>
+        <div className={styles.stats} style={{animationDelay: '1.05s'}}>
           {STATS.map((s) => (
             <div key={s.label} className={styles.stat}>
               <div className={styles.statNum}>{s.num}</div>
@@ -72,14 +100,33 @@ function Hero() {
   );
 }
 
+function Ticker() {
+  const row = [...TICKER, ...TICKER];
+  return (
+    <div className={styles.ticker} aria-hidden="true">
+      <div className={styles.tickerTrack}>
+        {row.map((word, i) => (
+          <span key={i} className={styles.tickerItem}>
+            {word}
+            <span className={styles.tickerSep}>✳</span>
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function TrackCards() {
   return (
     <section className={styles.section}>
       <div className="container">
-        <h2 className={styles.sectionTitle}>Choose your track</h2>
+        <p className={styles.kicker} data-reveal>choose your track</p>
+        <h2 className={styles.sectionTitle} data-reveal>
+          Two tracks. One <em className={styles.em}>unbroken</em> path.
+        </h2>
         <div className={styles.trackGrid}>
-          <div className={styles.trackCard}>
-            <div className={styles.trackTag}>Track 1</div>
+          <article className={styles.trackCard} data-reveal style={{'--reveal-delay': '0.1s'}}>
+            <div className={styles.trackNum}>01</div>
             <h3>Basics → Advanced Programming with Python</h3>
             <p>
               12 hands-on modules with notes, stub exercises, reference
@@ -93,11 +140,11 @@ function TrackCards() {
               <li>Typing, packaging, and DSA-ready Python idioms</li>
             </ul>
             <Link className="button button--primary" to="/python">
-              Begin Track 1
+              Begin Track 01&nbsp;→
             </Link>
-          </div>
-          <div className={styles.trackCard}>
-            <div className={styles.trackTag}>Track 2</div>
+          </article>
+          <article className={styles.trackCard} data-reveal style={{'--reveal-delay': '0.22s'}}>
+            <div className={styles.trackNum}>02</div>
             <h3>Data Structures &amp; Algorithms with Python</h3>
             <p>
               24 topics from complexity analysis to segment trees and design
@@ -111,9 +158,9 @@ function TrackCards() {
               <li>Advanced strings, graphs, and data-structure design</li>
             </ul>
             <Link className="button button--primary" to="/dsa">
-              Begin Track 2
+              Begin Track 02&nbsp;→
             </Link>
-          </div>
+          </article>
         </div>
       </div>
     </section>
@@ -124,28 +171,23 @@ function HowItWorks() {
   return (
     <section className={clsx(styles.section, styles.sectionAlt)}>
       <div className="container">
-        <h2 className={styles.sectionTitle}>How every topic works</h2>
+        <p className={styles.kicker} data-reveal>the loop</p>
+        <h2 className={styles.sectionTitle} data-reveal>
+          How every topic <em className={styles.em}>actually</em> sticks
+        </h2>
         <div className={styles.steps}>
-          <div className={styles.step}>
-            <div className={styles.stepNum}>1</div>
-            <h3>Understand</h3>
-            <p>Read the notes and study guide. Trace the worked example by hand until the invariant clicks.</p>
-          </div>
-          <div className={styles.step}>
-            <div className={styles.stepNum}>2</div>
-            <h3>Implement</h3>
-            <p>Code the core templates without looking. Run the tests in your browser until they go green.</p>
-          </div>
-          <div className={styles.step}>
-            <div className={styles.stepNum}>3</div>
-            <h3>Drill</h3>
-            <p>Solve the problem ladder: brute force → optimized → complexity → edge cases, every time.</p>
-          </div>
-          <div className={styles.step}>
-            <div className={styles.stepNum}>4</div>
-            <h3>Review</h3>
-            <p>Spaced flashcards and revision checklists convert knowledge into interview-day recall.</p>
-          </div>
+          {[
+            {n: '1', t: 'Understand', d: 'Read the notes and study guide. Trace the worked example by hand until the invariant clicks.'},
+            {n: '2', t: 'Implement', d: 'Code the core templates without looking. Run the tests in your browser until they go green.'},
+            {n: '3', t: 'Drill', d: 'Solve the problem ladder: brute force → optimized → complexity → edge cases, every time.'},
+            {n: '4', t: 'Review', d: 'Spaced flashcards and revision checklists convert knowledge into interview-day recall.'},
+          ].map((s, i) => (
+            <div key={s.n} className={styles.step} data-reveal style={{'--reveal-delay': `${i * 0.12}s`}}>
+              <div className={styles.stepNum}>{s.n}</div>
+              <h3>{s.t}</h3>
+              <p>{s.d}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
@@ -156,25 +198,28 @@ function FeatureGrid() {
   return (
     <section className={styles.section}>
       <div className="container">
-        <h2 className={styles.sectionTitle}>Built like a course, not a dump of notes</h2>
+        <p className={styles.kicker} data-reveal>why it works</p>
+        <h2 className={styles.sectionTitle} data-reveal>
+          Built like a course, not a <em className={styles.em}>dump of notes</em>
+        </h2>
         <div className={styles.featureGrid}>
-          {FEATURES.map((f) => (
-            <div key={f.title} className={styles.feature}>
+          {FEATURES.map((f, i) => (
+            <div key={f.title} className={styles.feature} data-reveal style={{'--reveal-delay': `${(i % 3) * 0.1}s`}}>
               <h3>{f.title}</h3>
               <p>{f.body}</p>
             </div>
           ))}
         </div>
-        <div className={styles.startBox}>
-          <h3>Ready?</h3>
+        <div className={styles.startBox} data-reveal>
+          <h3>Ready when you are.</h3>
           <p>
-            New to programming? Start Track 1. Already comfortable in Python?{' '}
+            New to programming? Start Track 01. Already comfortable in Python?{' '}
             <Link to="/guides/learning-path">Open the learning path</Link> and
             go straight to the DSA curriculum.
           </p>
           <div className={styles.ctaRow}>
             <Link className="button button--primary button--lg" to="/python">
-              Start learning
+              Start learning&nbsp;→
             </Link>
             <Link className="button button--secondary button--lg" to="/practice/top-interview-questions">
               Browse practice problems
@@ -192,6 +237,7 @@ export default function Home() {
     <Layout title={siteConfig.title} description={siteConfig.tagline}>
       <Hero />
       <main>
+        <Ticker />
         <TrackCards />
         <HowItWorks />
         <FeatureGrid />

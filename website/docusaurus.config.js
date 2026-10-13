@@ -14,6 +14,10 @@ const config = {
   projectName: 'python-dsa',
   trailingSlash: false,
 
+  stylesheets: [
+    'https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Schibsted+Grotesk:wght@400..900&family=JetBrains+Mono:wght@400;500;700&display=swap',
+  ],
+
   onBrokenLinks: 'throw',
   onBrokenAnchors: 'warn',
 
