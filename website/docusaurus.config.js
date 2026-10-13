@@ -8,6 +8,12 @@ const config = {
   tagline: 'From your first Python program to top-tier interview readiness',
   favicon: 'img/logo.svg',
 
+  headTags: [
+    {tagName: 'meta', attributes: {property: 'og:site_name', content: 'Python DSA Masterclass'}},
+    {tagName: 'meta', attributes: {property: 'og:type', content: 'website'}},
+    {tagName: 'meta', attributes: {name: 'twitter:card', content: 'summary_large_image'}},
+  ],
+
   url: 'https://ashiii27.github.io',
   baseUrl,
   organizationName: 'Ashiii27',
@@ -40,6 +46,7 @@ const config = {
         indexBlog: false,
         indexPages: true,
         docsRouteBasePath: ['/python', '/dsa', '/guides', '/practice'],
+        docsDir: ['docs-python', 'docs-dsa', 'docs-guides', 'docs-practice'],
         docsPluginIdForPreferredVersion: 'python',
         highlightSearchTermsOnTargetPage: true,
       }),
@@ -67,7 +74,6 @@ const config = {
         path: 'docs-python',
         routeBasePath: 'python',
         sidebarPath: './sidebars.python.js',
-        editUrl: 'https://github.com/Ashiii27/python-dsa/tree/main/',
       },
     ],
     [
@@ -77,7 +83,6 @@ const config = {
         path: 'docs-dsa',
         routeBasePath: 'dsa',
         sidebarPath: './sidebars.dsa.js',
-        editUrl: 'https://github.com/Ashiii27/python-dsa/tree/main/',
       },
     ],
     [
@@ -87,7 +92,6 @@ const config = {
         path: 'docs-guides',
         routeBasePath: 'guides',
         sidebarPath: './sidebars.guides.js',
-        editUrl: 'https://github.com/Ashiii27/python-dsa/tree/main/',
       },
     ],
     [
@@ -97,7 +101,6 @@ const config = {
         path: 'docs-practice',
         routeBasePath: 'practice',
         sidebarPath: './sidebars.practice.js',
-        editUrl: 'https://github.com/Ashiii27/python-dsa/tree/main/',
       },
     ],
   ],
@@ -105,7 +108,15 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      image: 'img/logo.svg',
+      image: 'img/og.png',
+      announcementBar: {
+        id: 'open-repo',
+        content:
+          'Built in the open — every note, problem and test lives in <a target="_blank" rel="noopener noreferrer" href="https://github.com/Ashiii27/python-dsa">one GitHub repository</a>.',
+        backgroundColor: 'var(--paper-2)',
+        textColor: 'var(--ink)',
+        isCloseable: true,
+      },
       colorMode: {
         defaultMode: 'dark',
         respectPrefersColorScheme: true,

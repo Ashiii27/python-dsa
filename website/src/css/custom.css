@@ -365,6 +365,32 @@ code {
   transform: translateX(3px);
 }
 
+/* ============ announcement bar ============ */
+
+div[class^='announcementBar'] {
+  border-bottom: 1px solid var(--line);
+  font-size: 0.92rem;
+}
+
+div[class^='announcementBarContent'] {
+  background: var(--paper-2);
+  color: var(--ink);
+  border-radius: 0;
+}
+
+div[class^='announcementBarContent'] a {
+  color: var(--clay-deep);
+  font-weight: 650;
+}
+
+[data-theme='dark'] div[class^='announcementBarContent'] a {
+  color: var(--clay);
+}
+
+button[class^='announcementBarClose'] {
+  color: var(--ink-soft);
+}
+
 /* ============ animations & motion utilities ============ */
 
 @keyframes fadeUp {
