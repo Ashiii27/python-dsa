@@ -31,11 +31,12 @@ Store strings by prefixes for fast prefix lookup, dictionary pruning, and bitwis
 
 ## Python notes
 
-- Start with a brute-force idea, then identify the repeated work.
-- State the invariant before coding.
-- Write edge cases before submitting.
-- Explain time and space complexity in terms of input size.
+- `is_word` is what separates a stored word from a prefix of another word.
+- Store counts on nodes to answer "how many words start with P" in O(len P).
+- `node.children.setdefault(ch, TrieNode())` keeps insertion short and readable.
+- Nested dicts are a compact alternative when the alphabet is small and you do not need counts.
 
+Runnable builds, step-by-step walkthroughs and solved examples live in **Python implementation (build it from scratch)** in the [complete study guide](study-guide.md).
 
 ---
 

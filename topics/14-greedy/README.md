@@ -32,11 +32,12 @@ Make locally optimal choices only when you can prove they are globally safe.
 
 ## Python notes
 
-- Start with a brute-force idea, then identify the repeated work.
-- State the invariant before coding.
-- Write edge cases before submitting.
-- Explain time and space complexity in terms of input size.
+- Greedy needs an exchange argument — test it against a nasty case first (coins `[1, 3, 4]`, amount 6 breaks the obvious rule).
+- Sorting by **finish time** is the usual first move for interval problems.
+- Many greedy solutions keep a single "best so far" value: farthest reach, lowest price, best end.
+- Reach for a heap when the greedy step repeatedly needs the current minimum or maximum.
 
+Runnable builds, step-by-step walkthroughs and solved examples live in **Python implementation (build it from scratch)** in the [complete study guide](study-guide.md).
 
 ---
 

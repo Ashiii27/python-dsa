@@ -32,11 +32,12 @@ Learn pointer manipulation, dummy nodes, fast/slow pointers, reversal, merging, 
 
 ## Python notes
 
-- Start with a brute-force idea, then identify the repeated work.
-- State the invariant before coding.
-- Write edge cases before submitting.
-- Explain time and space complexity in terms of input size.
+- A dummy/sentinel head removes every "is it the head?" special case.
+- Compare nodes with `is` (identity), never `==`: values may repeat but nodes do not.
+- Save `nxt = cur.next` *before* overwriting `cur.next`, or you lose the rest of the list.
+- Recursive list solutions use O(n) stack space and break near 1000 nodes; prefer the loop.
 
+Runnable builds, step-by-step walkthroughs and solved examples live in **Python implementation (build it from scratch)** in the [complete study guide](study-guide.md).
 
 ---
 

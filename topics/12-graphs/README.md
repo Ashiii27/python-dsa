@@ -34,11 +34,12 @@ Model relationships with nodes and edges; solve traversal, connectivity, orderin
 
 ## Python notes
 
-- Start with a brute-force idea, then identify the repeated work.
-- State the invariant before coding.
-- Write edge cases before submitting.
-- Explain time and space complexity in terms of input size.
+- `defaultdict(list)` is the idiomatic adjacency list; keep the node set (`range(n)`) separate from it.
+- Mark a node visited when you **enqueue** it, not when you dequeue it.
+- Store `(neighbour, weight)` in the graph but `(distance, node)` in the heap — mixing them up is a classic bug.
+- Prefer iterative DFS for large graphs; recursion depth is capped around 1000 frames.
 
+Runnable builds, step-by-step walkthroughs and solved examples live in **Python implementation (build it from scratch)** in the [complete study guide](study-guide.md).
 
 ---
 

@@ -87,10 +87,12 @@ python-dsa/
 │   ├── 01-complexity-analysis/
 │   │   └── problems/README.md
 │   ├── 02-arrays-and-strings/
-│   │   ├── study-guide.md        # concepts, examples, tricks, patterns
+│   │   ├── study-guide.md        # concepts, runnable builds, solved examples
 │   │   └── problems/             # worked notes, solutions, and tests
 │   ├── ...                       # every topic has its own study guide
 │   └── 23-design-data-structures/
+├── tools/
+│   └── check_snippets.py         # runs every Python snippet in the notes
 ├── practice/
 │   ├── top-interview-questions.md
 │   ├── extended-practice.md      # 96 additional cross-platform problems
@@ -128,8 +130,22 @@ Every curriculum topic now includes a dedicated `study-guide.md` with:
 - interview tricks and common mistakes
 - implementation drills and active-recall checkpoints
 - an additional cross-platform practice ladder
+- **Python implementation (build it from scratch)** — every data structure and
+  algorithm built and explained line by line, with runnable code and real output
+  (linked lists and queues get complete classes, heaps/tries/segment trees/UF are
+  written from scratch, and so on)
+- **Solved examples** — two or three worked interview problems per topic with
+  approach, proof idea, runnable solution, real output and complexity
 
 Open any topic from the curriculum table above and follow its **Complete study guide** link.
+
+Every code block in those notes is executable and its output is generated, not
+hand-written:
+
+```bash
+python3 tools/check_snippets.py            # run every snippet in the notes
+python3 tools/check_snippets.py --fill     # regenerate the "Output:" blocks
+```
 
 ---
 
@@ -221,6 +237,17 @@ No third-party dependency is required:
 
 ```bash
 python topics/02-arrays-and-strings/problems/run_tests.py
+```
+
+### Run every snippet in the notes
+
+The notes are executable: the checker extracts every Python block from the
+markdown, runs it, and reports failures. Outputs shown under each snippet are
+generated with `--fill`, so they cannot drift from the code.
+
+```bash
+python3 tools/check_snippets.py            # verify all snippets run
+python3 tools/check_snippets.py --fill     # regenerate "Output:" blocks
 ```
 
 ---

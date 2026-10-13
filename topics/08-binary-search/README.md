@@ -31,11 +31,12 @@ Search sorted positions and monotonic answer spaces with precise boundary contro
 
 ## Python notes
 
-- Start with a brute-force idea, then identify the repeated work.
-- State the invariant before coding.
-- Write edge cases before submitting.
-- Explain time and space complexity in terms of input size.
+- Two loop shapes only: `while lo <= hi` for exact search, `while lo < hi` for a boundary.
+- Use `mid = (lo + hi) // 2` for first-true, `(lo + hi + 1) // 2` for last-true.
+- Binary search needs a monotone predicate — state why it is monotone before coding.
+- Use `bisect` for plain lists; write the loop when the predicate is custom (search on answer).
 
+Runnable builds, step-by-step walkthroughs and solved examples live in **Python implementation (build it from scratch)** in the [complete study guide](study-guide.md).
 
 ---
 

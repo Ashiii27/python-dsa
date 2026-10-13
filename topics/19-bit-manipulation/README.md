@@ -32,11 +32,12 @@ Use binary representation for XOR tricks, masks, subsets, and compact DP state.
 
 ## Python notes
 
-- Start with a brute-force idea, then identify the repeated work.
-- State the invariant before coding.
-- Write edge cases before submitting.
-- Explain time and space complexity in terms of input size.
+- `n & (n - 1)` clears the lowest set bit; `n & -n` isolates it.
+- Parenthesise bit expressions in comparisons: `==` binds tighter than `&`, `|` and `^`.
+- XOR cancels pairs (`a ^ a = 0`), which is the basis of the single-number and missing-number problems.
+- A bitmask turns subset enumeration into a loop over `range(1 << n)`.
 
+Runnable builds, step-by-step walkthroughs and solved examples live in **Python implementation (build it from scratch)** in the [complete study guide](study-guide.md).
 
 ---
 

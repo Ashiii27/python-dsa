@@ -34,11 +34,12 @@ Build the Python fluency needed to solve DSA problems quickly and safely.
 
 ## Python notes
 
-- Start with a brute-force idea, then identify the repeated work.
-- State the invariant before coding.
-- Write edge cases before submitting.
-- Explain time and space complexity in terms of input size.
+- Reach for `collections` and `heapq` before writing a structure by hand: `Counter`, `defaultdict`, `deque`, `heapq`, `bisect`.
+- `list.pop(0)` and `list.insert(0, x)` are O(n); use `deque` whenever you need both ends.
+- Build grids with `[[0] * cols for _ in range(rows)]` — `[[0] * cols] * rows` repeats one shared row.
+- Raise `sys.setrecursionlimit(...)` (or use an explicit stack) before a deep DFS.
 
+Runnable builds, step-by-step walkthroughs and solved examples live in **Python implementation (build it from scratch)** in the [complete study guide](study-guide.md).
 
 ---
 

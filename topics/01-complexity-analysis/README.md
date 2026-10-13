@@ -31,11 +31,12 @@ Estimate time and space, compare approaches, and read constraints like interview
 
 ## Python notes
 
-- Start with a brute-force idea, then identify the repeated work.
-- State the invariant before coding.
-- Write edge cases before submitting.
-- Explain time and space complexity in terms of input size.
+- Budget roughly 10^7 simple operations per second in Python and estimate the step count from the constraints before coding.
+- Slicing inside recursion (`arr[1:]`) copies and costs O(n) per level — pass indices instead.
+- `x in list` is O(n) while `x in set` is O(1) average; choosing wrong turns O(n) into O(n^2).
+- `list.append` and `dict` insertion are *amortised* O(1): the occasional resize is paid for by the cheap operations before it.
 
+Runnable builds, step-by-step walkthroughs and solved examples live in **Python implementation (build it from scratch)** in the [complete study guide](study-guide.md).
 
 ---
 

@@ -32,11 +32,12 @@ Handle ranges, overlaps, scheduling, and event-based counting.
 
 ## Python notes
 
-- Start with a brute-force idea, then identify the repeated work.
-- State the invariant before coding.
-- Write edge cases before submitting.
-- Explain time and space complexity in terms of input size.
+- Sort by start, then scan once; decide explicitly whether `end == next start` counts as an overlap.
+- Sweep events are `+1` at a start and `-1` at an end; the running counter is the active count.
+- Merge by comparing `start` with the running end: `<=` merges touching intervals, `<` keeps them apart.
+- Two sorted interval lists intersect with a two-pointer scan in O(n + m).
 
+Runnable builds, step-by-step walkthroughs and solved examples live in **Python implementation (build it from scratch)** in the [complete study guide](study-guide.md).
 
 ---
 

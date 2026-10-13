@@ -35,11 +35,12 @@ Turn repeated subproblems into states, transitions, and ordered computation.
 
 ## Python notes
 
-- Start with a brute-force idea, then identify the repeated work.
-- State the invariant before coding.
-- Write edge cases before submitting.
-- Explain time and space complexity in terms of input size.
+- Define the state in one sentence before writing the recurrence; if you cannot, the DP is wrong.
+- `@lru_cache` gives top-down; tables give bottom-up and can often be compressed to one row.
+- Loop over coins in the **outer** loop when counting combinations, not permutations.
+- 1D knapsack: iterate capacity backwards so each item can be used only once.
 
+Runnable builds, step-by-step walkthroughs and solved examples live in **Python implementation (build it from scratch)** in the [complete study guide](study-guide.md).
 
 ---
 

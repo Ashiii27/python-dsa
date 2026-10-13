@@ -32,11 +32,12 @@ Master contiguous data, indexing, two pointers, sliding windows, prefix sums, an
 
 ## Python notes
 
-- Start with a brute-force idea, then identify the repeated work.
-- State the invariant before coding.
-- Write edge cases before submitting.
-- Explain time and space complexity in terms of input size.
+- Use half-open ranges `[left, right)`; lengths and counts are then just `right - left`.
+- Strings are immutable: collect parts and `"".join(parts)`, never `+=` inside a loop.
+- `sorted(key=...)` is stable and calls the key once per element; use tuple keys for multi-key sorts.
+- A sliding window maintains its state incrementally — never recompute the window from scratch.
 
+Runnable builds, step-by-step walkthroughs and solved examples live in **Python implementation (build it from scratch)** in the [complete study guide](study-guide.md).
 
 ---
 

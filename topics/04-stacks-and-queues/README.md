@@ -32,11 +32,12 @@ Use LIFO/FIFO structures for parsing, simulation, monotonic candidates, and shor
 
 ## Python notes
 
-- Start with a brute-force idea, then identify the repeated work.
-- State the invariant before coding.
-- Write edge cases before submitting.
-- Explain time and space complexity in terms of input size.
+- `list` is a stack (`append` / `pop()` are O(1)); `deque` is a queue (`popleft()` is O(1)).
+- Monotonic stacks store **indices**, not values, so you can compute distances and widths.
+- In a monotonic deque, pop from the back before pushing to keep candidates ordered.
+- Decide explicitly what popping an empty stack does (raise, or return a sentinel) and test it.
 
+Runnable builds, step-by-step walkthroughs and solved examples live in **Python implementation (build it from scratch)** in the [complete study guide](study-guide.md).
 
 ---
 

@@ -33,11 +33,12 @@ Solve hierarchical problems using DFS, BFS, recursion returns, path reasoning, a
 
 ## Python notes
 
-- Start with a brute-force idea, then identify the repeated work.
-- State the invariant before coding.
-- Write edge cases before submitting.
-- Explain time and space complexity in terms of input size.
+- Recursive traversals differ only in *where* the node is visited relative to the two calls.
+- Post-order is the default shape for "combine the children's answers" (height, diameter, path sums).
+- Iterative traversals with an explicit stack survive trees deeper than the recursion limit.
+- Level order = `deque` plus a snapshot of the current level size before the inner loop.
 
+Runnable builds, step-by-step walkthroughs and solved examples live in **Python implementation (build it from scratch)** in the [complete study guide](study-guide.md).
 
 ---
 

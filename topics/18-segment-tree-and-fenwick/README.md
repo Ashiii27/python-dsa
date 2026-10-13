@@ -31,11 +31,12 @@ Answer range queries with updates efficiently.
 
 ## Python notes
 
-- Start with a brute-force idea, then identify the repeated work.
-- State the invariant before coding.
-- Write edge cases before submitting.
-- Explain time and space complexity in terms of input size.
+- `i & -i` is the whole Fenwick trick: it steps to the parent and to the next covered range.
+- Fenwick needs an invertible operation (sum, xor); use a segment tree for min/max/gcd.
+- Coordinate-compress values before using them as indices — required for negatives and large ranges.
+- Lazy propagation: update a fully covered node, record the pending value, push it down only when needed.
 
+Runnable builds, step-by-step walkthroughs and solved examples live in **Python implementation (build it from scratch)** in the [complete study guide](study-guide.md).
 
 ---
 
