@@ -18,6 +18,14 @@ build/
 dist/
 *.egg-info/
 
+# Website (node_modules + generated content — rebuild with `npm run gen`)
+website/node_modules/
+website/.docusaurus/
+website/docs-python/
+website/docs-dsa/
+website/docs-guides/
+website/docs-practice/
+
 # Editors / OS
 .DS_Store
 .vscode/

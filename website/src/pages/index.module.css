@@ -1,0 +1,171 @@
+.hero {
+  padding: 5.5rem 0 3.5rem;
+  text-align: center;
+  background:
+    radial-gradient(60rem 30rem at 50% -10rem, rgba(76, 145, 219, 0.22), transparent 70%),
+    radial-gradient(40rem 22rem at 85% 0, rgba(47, 179, 128, 0.16), transparent 70%);
+}
+
+.heroTitle {
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  line-height: 1.1;
+  margin: 0 0 1rem;
+}
+
+.grad {
+  background: linear-gradient(92deg, var(--ifm-color-primary), #2fb380);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.heroSub {
+  max-width: 46rem;
+  margin: 0 auto 2rem;
+  font-size: 1.22rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.ctaRow {
+  display: flex;
+  gap: 0.9rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.25rem;
+  max-width: 52rem;
+  margin: 3.25rem auto 0;
+}
+
+.statNum {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--ifm-color-primary);
+}
+
+.statLabel {
+  font-size: 0.92rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.section {
+  padding: 3.75rem 0;
+}
+
+.sectionAlt {
+  background: var(--ifm-color-emphasis-100);
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 1.9rem;
+  margin-bottom: 2.25rem;
+}
+
+.trackGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.trackCard {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 16px;
+  padding: 1.75rem;
+  background: var(--ifm-background-surface-color);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.trackCard h3 {
+  margin: 0;
+}
+
+.trackTag {
+  align-self: flex-start;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  background: var(--ifm-color-primary);
+  color: #fff;
+}
+
+.trackList {
+  margin: 0.25rem 0 0.75rem;
+  padding-left: 1.2rem;
+  color: var(--ifm-color-emphasis-700);
+  flex: 1;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1.5rem;
+}
+
+.step {
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.stepNum {
+  width: 2.6rem;
+  height: 2.6rem;
+  margin: 0 auto 0.85rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.15rem;
+  background: var(--ifm-color-primary);
+  color: #fff;
+}
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.feature {
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 14px;
+  padding: 1.4rem;
+  background: var(--ifm-background-surface-color);
+}
+
+.feature h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.12rem;
+}
+
+.feature p {
+  margin: 0;
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.97rem;
+}
+
+.startBox {
+  margin-top: 3rem;
+  text-align: center;
+  border-radius: 18px;
+  padding: 2.75rem 1.5rem;
+  background:
+    radial-gradient(40rem 18rem at 50% -6rem, rgba(76, 145, 219, 0.18), transparent 70%),
+    var(--ifm-color-emphasis-100);
+}
+
+.startBox h3 {
+  font-size: 1.65rem;
+  margin-bottom: 0.5rem;
+}

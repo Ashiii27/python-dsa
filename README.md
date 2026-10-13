@@ -8,6 +8,18 @@ This repo is designed to take you from the absolute basics to the level expected
 
 ---
 
+## 🌐 Course website
+
+This repository powers a full learning site — **Python DSA Masterclass** — with the
+same content rendered as a two-track course: *Learn Python* and *DSA with Python*.
+
+- Live site: `https://ashiii27.github.io/python-dsa/`
+- The repo markdown stays the single source of truth; the site is generated from it
+  on every build (`website/scripts/generate_content.py`).
+- Run it locally: `cd website && npm install && npm start` — see [`website/README.md`](website/README.md).
+
+---
+
 ## New to Python? Start here
 
 If you cannot yet write Python comfortably, do the **[Python Track](python/README.md)** first:
