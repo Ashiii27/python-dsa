@@ -32,11 +32,12 @@ Combine multiple data structures to satisfy strict operation complexity requirem
 
 ## Python notes
 
-- Start with a brute-force idea, then identify the repeated work.
-- State the invariant before coding.
-- Write edge cases before submitting.
-- Explain time and space complexity in terms of input size.
+- Designs combine two primitives: hash map + linked list (LRU), array + index map (randomised set), dict + sorted list (time map).
+- Sentinel head/tail nodes remove every `None` check from linked-list code.
+- "Swap with the last element and pop" gives O(1) removal when order does not matter.
+- For mutable top-k, use a heap with lazy validation instead of rebuilding it.
 
+Runnable builds, step-by-step walkthroughs and solved examples live in **Python implementation (build it from scratch)** in the [complete study guide](study-guide.md).
 
 ---
 

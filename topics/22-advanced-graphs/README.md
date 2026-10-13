@@ -34,11 +34,12 @@ Go beyond BFS/DFS into weighted shortest paths, MSTs, SCCs, bridges, and advance
 
 ## Python notes
 
-- Start with a brute-force idea, then identify the repeated work.
-- State the invariant before coding.
-- Write edge cases before submitting.
-- Explain time and space complexity in terms of input size.
+- Non-negative weights → Dijkstra; negative weights → Bellman-Ford; all pairs → Floyd-Warshall.
+- Skip stale heap entries with a `settled` set instead of implementing decrease-key.
+- Kruskal with Union-Find for MST; Prim with a heap for dense graphs.
+- In Floyd-Warshall the `k` loop must be outermost, or the invariant breaks.
 
+Runnable builds, step-by-step walkthroughs and solved examples live in **Python implementation (build it from scratch)** in the [complete study guide](study-guide.md).
 
 ---
 

@@ -31,11 +31,12 @@ Use linear-time string algorithms for matching, borders, repeated patterns, and 
 
 ## Python notes
 
-- Start with a brute-force idea, then identify the repeated work.
-- State the invariant before coding.
-- Write edge cases before submitting.
-- Explain time and space complexity in terms of input size.
+- `pi[i]` (KMP) and `z[i]` (Z-function) both mean "how much matches here" — know one of them cold.
+- Rolling hash gives O(1) substring comparison; confirm a hit with a real comparison before trusting it.
+- Binary-search the answer length whenever the property is monotone (longest duplicate substring).
+- Fixed-window anagram search uses two counters plus a `matches` tally to stay O(n).
 
+Runnable builds, step-by-step walkthroughs and solved examples live in **Python implementation (build it from scratch)** in the [complete study guide](study-guide.md).
 
 ---
 

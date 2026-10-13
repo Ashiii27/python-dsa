@@ -32,11 +32,12 @@ Use dictionaries and sets for fast lookup, counting, grouping, canonicalization,
 
 ## Python notes
 
-- Start with a brute-force idea, then identify the repeated work.
-- State the invariant before coding.
-- Write edge cases before submitting.
-- Explain time and space complexity in terms of input size.
+- `dict.get(key, default)` and `defaultdict` remove branches; `setdefault` also inserts the key.
+- Keys must be hashable: `tuple` instead of `list`, `frozenset` instead of `set`.
+- Composite keys such as `(row, col)` or `f"{row}#{col}"` collapse several checks into one set.
+- `dict` keeps insertion order, so iterating `.items()` is O(n) and predictable.
 
+Runnable builds, step-by-step walkthroughs and solved examples live in **Python implementation (build it from scratch)** in the [complete study guide](study-guide.md).
 
 ---
 

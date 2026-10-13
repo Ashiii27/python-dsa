@@ -32,22 +32,33 @@ Understand comparison sorting, selection, ordering tricks, and when sorting unlo
 
 ## Python notes
 
-- Start with a brute-force idea, then identify the repeated work.
-- State the invariant before coding.
-- Write edge cases before submitting.
-- Explain time and space complexity in terms of input size.
+- `bisect_left` / `bisect_right` are the two primitives behind boundaries, counts and insertion points.
+- `heapq.nlargest(k, ...)` is O(n log k) — cheaper than a full sort when k is small.
+- Naive quicksort is O(n^2) on duplicates; three-way partitioning fixes that case.
+- `sorted()` returns a new list; `list.sort()` mutates and returns `None`.
 
+Runnable builds, step-by-step walkthroughs and solved examples live in **Python implementation (build it from scratch)** in the [complete study guide](study-guide.md).
 
 ---
 
 ## Canonical template
 
 ```python
-intervals.sort(key=lambda x: (x[0], x[1]))
+import heapq
+
+intervals = [[2, 3], [1, 4], [1, 2]]
+records = [{'age': 30, 'score': 90, 'name': 'ada'},
+           {'age': 30, 'score': 90, 'name': 'alan'},
+           {'age': 25, 'score': 95, 'name': 'bob'}]
+
+# Multi-key sorting: start ascending, then end ascending.
+intervals.sort(key=lambda x: (x[0], x[1]))        # [[1, 2], [1, 4], [2, 3]]
+
+# Mixed directions: age ascending, score descending, name ascending.
 records.sort(key=lambda r: (r['age'], -r['score'], r['name']))
 
 def kth_largest_heap(nums, k):
-    import heapq
+    """k-th largest without sorting everything: O(n log k)."""
     return heapq.nlargest(k, nums)[-1]
 ```
 

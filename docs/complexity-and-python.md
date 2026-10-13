@@ -77,8 +77,11 @@ Space O(n): maximum call depth
 ### Slicing in recursion
 
 ```python
-left = arr[:mid]   # copies
-right = arr[mid:]  # copies
+arr = list(range(1_000))
+mid = len(arr) // 2
+
+left = arr[:mid]    # copies: O(n) time and O(n) memory per level
+right = arr[mid:]   # copies: the second half again
 ```
 
 Prefer indices for performance-sensitive code.
@@ -86,20 +89,26 @@ Prefer indices for performance-sensitive code.
 ### String building
 
 ```python
-# Potentially quadratic
+chars = ["a"] * 1_000
+
+# Potentially quadratic: each += reallocates and copies the whole string
 ans = ""
 for ch in chars:
     ans += ch
 
-# Better
+# Better: one allocation, O(n) total
 ans = "".join(chars)
 ```
 
 ### Sorting inside a loop
 
 ```python
+items = list(range(1_000))
+values = list(reversed(items))
+
 for item in items:
-    values.sort()  # often accidental O(n^2 log n)
+    values.append(item)
+    values.sort()          # sorting inside a loop: often accidental O(n^2 log n)
 ```
 
 Consider heap, balanced structure, counting, or one final sort.

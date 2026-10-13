@@ -33,11 +33,12 @@ Use arithmetic, modular reasoning, primes, gcd, and combinatorics in coding prob
 
 ## Python notes
 
-- Start with a brute-force idea, then identify the repeated work.
-- State the invariant before coding.
-- Write edge cases before submitting.
-- Explain time and space complexity in terms of input size.
+- Use the three-argument `pow(a, e, mod)` — it is C-speed modular exponentiation.
+- Modular division means multiplying by an inverse, which exists only when `gcd(a, mod) == 1`.
+- Count prime factors instead of computing huge numbers (Legendre's formula).
+- Trial division to sqrt(n) is fine for one-off primality; sieve when you need many primes.
 
+Runnable builds, step-by-step walkthroughs and solved examples live in **Python implementation (build it from scratch)** in the [complete study guide](study-guide.md).
 
 ---
 

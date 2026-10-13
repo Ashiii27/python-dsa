@@ -32,11 +32,12 @@ Maintain dynamic connected components with near-constant-time union and find.
 
 ## Python notes
 
-- Start with a brute-force idea, then identify the repeated work.
-- State the invariant before coding.
-- Write edge cases before submitting.
-- Explain time and space complexity in terms of input size.
+- Path compression plus union by size make each operation near-constant (inverse Ackermann).
+- `union` returning `False` means "already connected" — that is a cycle in an undirected graph.
+- A dict-backed Union-Find handles strings, tuples and mixed key types (encode rows as `("r", r)`).
+- Union-Find only merges sets; it cannot split them, so it suits offline and incremental problems.
 
+Runnable builds, step-by-step walkthroughs and solved examples live in **Python implementation (build it from scratch)** in the [complete study guide](study-guide.md).
 
 ---
 

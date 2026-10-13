@@ -32,11 +32,12 @@ Use ordering properties to validate, search, traverse, and modify binary search 
 
 ## Python notes
 
-- Start with a brute-force idea, then identify the repeated work.
-- State the invariant before coding.
-- Write edge cases before submitting.
-- Explain time and space complexity in terms of input size.
+- Validate with narrowing bounds (`low`, `high`), not by comparing with the immediate parent.
+- Deleting a node with two children: copy the in-order successor's value, then delete the successor.
+- An in-order walk of a BST yields its values in sorted order — use it for validation and k-th queries.
+- Inserting sorted data degenerates a BST into a linked list: height n, all operations O(n).
 
+Runnable builds, step-by-step walkthroughs and solved examples live in **Python implementation (build it from scratch)** in the [complete study guide](study-guide.md).
 
 ---
 

@@ -78,6 +78,56 @@ Tests must run from a fresh clone without third-party packages. Topic-level runn
 
 ---
 
+## Code snippets inside the notes
+
+Every topic's `study-guide.md` ends with two code-heavy sections:
+
+1. **Python implementation (build it from scratch)** — the data structure or
+   technique implemented from first principles, with a step-by-step "How it
+   works" walkthrough.
+2. **Solved examples** — two or three worked problems: statement, approach,
+   runnable code, real output, and complexity.
+
+Standards for those snippets:
+
+- **Every ```python block must run on its own.** Copy-paste into a file and it
+  executes; no hidden setup, no `...`, no undefined names.
+- Put the demo under `if __name__ == "__main__":` and print something.
+- Show the real output underneath. Write `<<output>>` inside a ```text fence
+  and let the tooling fill it in:
+
+  ````text
+  ```python
+  print("hi")
+  ```
+
+  Output:
+
+  ```text
+  <<output>>
+  ```
+  ````
+
+- Keep output deterministic: no wall-clock timings, no unseeded randomness, no
+  printing of sets or dicts whose order depends on string hashing.
+- A deliberately partial fragment must start with the marker `# skip-check`.
+- Snippets must not depend on interpreter state they changed earlier (restore
+  `sys.setrecursionlimit` if you raise it).
+
+### Tooling
+
+```bash
+python3 tools/check_snippets.py            # verify every snippet executes
+python3 tools/check_snippets.py --fill     # write real output into <<output>> blocks
+python3 tools/check_snippets.py --refresh  # re-run and overwrite existing outputs
+python3 tools/check_snippets.py --all      # include python/ lessons as well
+python3 tools/check_snippets.py topics/03-linked-lists/study-guide.md   # one file
+```
+
+The same command runs in CI, so a broken snippet fails the build.
+
+---
+
 ## Practice standard
 
 For each topic:

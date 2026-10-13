@@ -32,11 +32,12 @@ Explore decision trees, generate combinations/permutations, and solve constraint
 
 ## Python notes
 
-- Start with a brute-force idea, then identify the repeated work.
-- State the invariant before coding.
-- Write edge cases before submitting.
-- Explain time and space complexity in terms of input size.
+- Backtracking is choose → explore → undo; the undo must restore state exactly.
+- Record `path.copy()` — appending `path` itself stores a reference that mutates later.
+- Prune before recursing: `break` on sorted input, or test feasibility first.
+- Python's default recursion limit is ~1000; deep DFS needs an explicit stack.
 
+Runnable builds, step-by-step walkthroughs and solved examples live in **Python implementation (build it from scratch)** in the [complete study guide](study-guide.md).
 
 ---
 

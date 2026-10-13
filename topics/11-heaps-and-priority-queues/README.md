@@ -32,11 +32,12 @@ Use priority queues for top-k, streaming medians, scheduling, merging, and short
 
 ## Python notes
 
-- Start with a brute-force idea, then identify the repeated work.
-- State the invariant before coding.
-- Write edge cases before submitting.
-- Explain time and space complexity in terms of input size.
+- `heapq` is a min-heap: negate values for a max-heap.
+- Push `(priority, tie_breaker, payload)` so the payload is never compared.
+- `heapify` builds a heap in O(n); pushing n items one by one is O(n log n).
+- Keep the heap at size k and `heapreplace` the root for streaming top-k problems.
 
+Runnable builds, step-by-step walkthroughs and solved examples live in **Python implementation (build it from scratch)** in the [complete study guide](study-guide.md).
 
 ---
 
